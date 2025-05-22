@@ -4,24 +4,24 @@ import { Badge } from "../ui/badge";
 export default function Hero() {
   return (
     <section className="from-muted to-background relative bg-gradient-to-tr px-4 md:px-10">
-      <div className="m-auto grid grid-cols-2 gap-4 border-x px-2 py-20 md:px-10">
+      <div className="m-auto grid border-x px-2 py-20 md:px-10 lg:grid-cols-2 lg:gap-8">
         <div className="from-background to-background/0 absolute top-0 left-0 z-10 h-10 w-full bg-gradient-to-b" />
         <hr className="absolute top-10 left-0 w-full" />
-        <div>
-          <Badge variant="outline" className="mx-auto mb-2">
+        <div className="flex flex-col items-center lg:items-start">
+          <Badge variant="outline" className="mb-2">
             ✨ Software Engineer
           </Badge>
-          <h1 className="mb-1 text-center text-3xl font-extrabold md:text-left md:text-5xl md:font-bold">
+          <h1 className="mb-1 text-center text-3xl font-extrabold md:text-5xl md:font-bold lg:text-left">
             I Build Custom Software That Makes You Stand Out, Scale Fast, &
             Systematize Everything For{" "}
             <span className="italic drop-shadow-lg">YOU</span>
           </h1>
-          <p className="text-muted-foreground mb-3 text-center text-lg md:text-left">
+          <p className="text-muted-foreground mb-3 text-center text-lg lg:text-left">
             I turn your ideas into conversion-optimized digital platforms that
             grow with your brand – no tech overwhelm, just results.
           </p>
           <div className="flex gap-2">
-            <button className="text-primary-foreground md:mim-w-50 mx-auto flex w-full transform cursor-pointer flex-col rounded-md border-[1.5px] border-blue-400 bg-gradient-to-b from-blue-600 to-blue-400 px-4 py-2 font-semibold shadow-md transition-all duration-150 ease-in-out hover:scale-105 active:scale-95 md:w-fit">
+            <button className="md:mim-w-50 mx-auto flex w-full transform cursor-pointer flex-col rounded-md border-[1.5px] border-blue-400 bg-gradient-to-b from-blue-600 to-blue-400 px-4 py-2 font-semibold text-white shadow-md transition-all duration-150 ease-in-out hover:scale-105 active:scale-95 md:w-fit">
               Get In Touch
               <span className="text-xs font-medium text-white/80">
                 No hard pitch. Just a real conversation
