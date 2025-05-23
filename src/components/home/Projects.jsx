@@ -1,6 +1,6 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
-import { placeholder } from "@/app/assets";
+import { bbe, placeholder } from "@/app/assets";
 
 const projects = [
   {
@@ -35,7 +35,7 @@ const projects = [
     title: "BBE Insider",
     description:
       "Full-stack learning management software & mock exam platform for the WU's BBE program.",
-    image: placeholder,
+    image: bbe,
     outcomes: [
       "€320,000+ project evaluation",
       "6,500+ active users across 2 mediums",
@@ -61,7 +61,7 @@ const projects = [
     repoUrl: "https://github.com",
   },
   {
-    title: "SaaS Marketing Site",
+    title: "ScaleInsta",
     description:
       "Designed and developed a high-converting marketing site for a SaaS startup",
     image: placeholder,
@@ -71,14 +71,13 @@ const projects = [
       "Contributed to $850K seed round success",
     ],
     technologies: ["Next.js", "Framer Motion", "Vercel"],
-    liveUrl: "https://example.com",
+    liveUrl: "https://scaleinsta.com",
     repoUrl: "https://github.com",
   },
 
   {
-    title: "AI Travel Itinerary Planner",
-    description:
-      "Built a machine learning system to personalize content for users",
+    title: "Voyagio",
+    description: "AI Travel Itinerary Planner to personalize trips for users",
     image: placeholder,
     outcomes: [
       "52% increase in user engagement",
@@ -93,7 +92,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section className="bg-muted px-4 py-10 md:px-2">
+    <section className="bg-muted px-4 py-10 md:px-10">
       <div className="m-auto grid max-w-6xl gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {projects.map((item, idx) => (
           <ProjectCard

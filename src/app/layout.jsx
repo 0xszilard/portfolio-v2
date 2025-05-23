@@ -16,18 +16,20 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: {
-    default: "",
-    template: "%s - 0xSzilard",
+    default: "Custom Software for Creators & Coaches",
+    template: "%s - InfoBridge",
   },
-  description: "",
+  description:
+    "I build custom software that helps content creators, coaches, and infoproduct businesses stand out, scale fast, and systematize everything.",
   metadataBase: new URL(process.env.NEXT_PUBLIC_URL),
   alternates: {
     canonical: process.env.NEXT_PUBLIC_URL,
   },
   keywords: keywords,
   openGraph: {
-    title: "",
-    description: "",
+    title: "Custom Software for Creators & Coaches - 0xSzilard",
+    description:
+      "Helping infoproduct businesses, coaches, and creators systematize, scale, and stand out with tailored software solutions.",
     siteName: "0xSzilard",
     type: "website",
     url: process.env.NEXT_PUBLIC_URL,
@@ -37,19 +39,20 @@ export const metadata = {
         secureUrl: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Preview image for ",
+        alt: "Custom Software Solutions by Szilárd",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    site: "@bbe.insider",
-    title: "",
-    description: "",
+    site: "@szilard.mate",
+    title: "Custom Software for Creators & Coaches - 0xSzilard",
+    description:
+      "Tailored software to help creators, coaches, and info businesses scale fast and systematize everything.",
     creator: "@szilard.mate",
     images: {
       url: "/twitter-image.png",
-      alt: "Preview image for",
+      alt: "Custom software for the creator economy",
     },
   },
   robots: {
