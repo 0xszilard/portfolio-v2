@@ -7,23 +7,24 @@ export default function About() {
       <div className="m-auto grid max-w-6xl gap-10 md:grid-cols-2 md:gap-16">
         <div>
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-            About Me
+            About Us
           </h2>
           <p className="text-muted-foreground mt-4 md:text-lg">
-            I'm a full-stack developer with 5+ years of experience building web
-            and mobile applications that deliver measurable business results. My
-            approach focuses on understanding business objectives first, then
-            crafting technical solutions that drive real outcomes.
+            We’re a full-stack development agency with over 7 years of
+            experience delivering web and mobile solutions that generate
+            tangible business impact. Our process begins with understanding your
+            strategic goals—then translating them into performant, scalable
+            technology.
           </p>
           <p className="text-muted-foreground mt-4 md:text-lg">
-            Previously, I've worked with startups, enterprise companies, and
-            everything in between. My projects have generated over $4.2M in
-            revenue for clients and saved countless hours through automation and
-            optimization.
+            From early-stage startups to enterprise clients, our team has
+            successfully launched products that have generated more than $4.2M
+            in client revenue—while saving time and costs through intelligent
+            automation and optimization.
           </p>
           <p className="text-muted-foreground mt-4 md:text-lg">
-            When I'm not coding, you'll find me mentoring junior developers,
-            speaking at tech conferences, or hiking with friends.
+            Beyond development, we’re passionate about mentoring, contributing
+            to the tech community, and staying at the forefront of innovation.
           </p>
         </div>
         <div className="space-y-6">
@@ -44,9 +45,11 @@ export default function About() {
             <Badge>React Native</Badge>
             <Badge>Expo</Badge>
             <Badge>REST</Badge>
+            <Badge>TailwindCSS</Badge>
+            <Badge>Vercel</Badge>
           </div>
 
-          <h3 className="text-xl font-bold">Business Skills</h3>
+          <h3 className="text-xl font-bold">Business Capabilities</h3>
           <div className="flex flex-wrap gap-2">
             <Badge variant="outline">Project Management</Badge>
             <Badge variant="outline">UX/UI Design</Badge>
@@ -58,7 +61,7 @@ export default function About() {
             <Badge variant="outline">Client Communication</Badge>
           </div>
 
-          <h3 className="text-xl font-bold">Education & Certifications</h3>
+          <h3 className="text-xl font-bold">Certifications</h3>
           <ul className="text-muted-foreground space-y-2">
             <li>AWS Certified Solutions Architect</li>
             <li>Google Cloud Professional Developer</li>

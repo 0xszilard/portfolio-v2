@@ -1,6 +1,6 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
-import { bbe, placeholder } from "@/app/assets";
+import { admin, bbe, placeholder, scaleinsta, voyagio } from "@/app/assets";
 
 const projects = [
   {
@@ -21,7 +21,7 @@ const projects = [
     title: "Healthcare Patient Portal",
     description:
       "Built a HIPAA-compliant patient management system for a healthcare provider",
-    image: placeholder,
+    image: admin,
     outcomes: [
       "Reduced admin workload by 32 hours/week",
       "97% patient satisfaction rating",
@@ -64,13 +64,13 @@ const projects = [
     title: "ScaleInsta",
     description:
       "Designed and developed a high-converting marketing site for a SaaS startup",
-    image: placeholder,
+    image: scaleinsta,
     outcomes: [
       "189% increase in lead generation",
       "Reduced bounce rate from 65% to 23%",
       "Contributed to $850K seed round success",
     ],
-    technologies: ["Next.js", "Framer Motion", "Vercel"],
+    technologies: ["Next.js", "Framer Motion", "Supabase"],
     liveUrl: "https://scaleinsta.com",
     repoUrl: "https://github.com",
   },
@@ -78,9 +78,9 @@ const projects = [
   {
     title: "Voyagio",
     description: "AI Travel Itinerary Planner to personalize trips for users",
-    image: placeholder,
+    image: voyagio,
     outcomes: [
-      "52% increase in user engagement",
+      "1000 active users in the first month",
       "Average session time increased by 4.7 minutes",
       "Featured in TechCrunch as innovative solution",
     ],
