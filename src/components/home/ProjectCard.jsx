@@ -24,7 +24,7 @@ export default function ProjectCard({
 }) {
   return (
     <Card className="overflow-hidden pt-0">
-      <div className="aspect-[16/10] w-full overflow-hidden">
+      <div className="aspect-[15/9] w-full overflow-hidden">
         <Image
           src={image || placeholder}
           alt={title}
