@@ -34,7 +34,7 @@ export default function Hero() {
         </div>
         <div className="relative">
           <Safari
-            url="szilardmate.com"
+            url="infobridge.dev"
             imageSrc="https://images.unsplash.com/photo-1746469471553-afa9f34157fd"
             className="size-full"
           />

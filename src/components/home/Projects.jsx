@@ -4,18 +4,18 @@ import { admin, bbe, placeholder, scaleinsta, voyagio } from "@/app/assets";
 
 const projects = [
   {
-    title: "E-commerce Platform Redesign",
+    title: "0xSec",
     description:
-      "Redesigned the UX/UI and optimized checkout flow for a major retail client",
+      "End-to-end cyber security platform offering real-time threat detection and automated incident response for SMEs",
     image: placeholder,
     outcomes: [
-      "43% increase in conversion rate",
-      "68% reduction in cart abandonment",
-      "$2.1M additional revenue in first quarter",
+      "Reduced average threat response time by 62%",
+      "Adopted by 40+ companies within the first 3 months",
+      "Passed independent penetration testing with zero critical vulnerabilities",
     ],
-    technologies: ["Next.js", "Tailwind CSS", "Stripe"],
-    liveUrl: "https://example.com",
-    repoUrl: "https://github.com",
+    technologies: ["React", "Node.js", "MongoDB", "Socket.IO", "AWS"],
+    liveUrl: "https://securesphere.app",
+    repoUrl: "https://github.com/",
   },
   {
     title: "Healthcare Patient Portal",
@@ -61,7 +61,7 @@ const projects = [
     repoUrl: "https://github.com",
   },
   {
-    title: "ScaleInsta",
+    title: "ScaleInsta / Hydrogen",
     description:
       "Designed and developed a high-converting marketing site for a SaaS startup",
     image: scaleinsta,
