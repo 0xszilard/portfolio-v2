@@ -6,7 +6,7 @@ export default function Booking() {
   return (
     <section className="px-4 py-10">
       <div className="m-auto max-w-5xl">
-        <div className="grid grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
             Let's Explore Your Idea - Book Your Free Consultation
           </h2>
