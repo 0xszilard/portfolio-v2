@@ -10,7 +10,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { ArrowUpRight, Github, TrendingUp } from "lucide-react";
+import { ArrowUpRight, Github, InfoIcon, TrendingUp } from "lucide-react";
 import { placeholder } from "@/app/assets";
 
 export default function ProjectCard({
@@ -62,8 +62,8 @@ export default function ProjectCard({
       <CardFooter className="flex justify-between gap-2">
         <Button variant="outline" size="sm" asChild>
           <Link href={repoUrl} className="flex items-center gap-1">
-            <Github className="h-3.5 w-3.5" />
-            <span>Code</span>
+            <InfoIcon className="h-3.5 w-3.5" />
+            <span>Read More</span>
           </Link>
         </Button>
         <Button size="sm" asChild>

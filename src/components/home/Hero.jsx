@@ -12,11 +12,11 @@ export default function Hero() {
             ✨ Software Engineering
           </Badge>
           <h1 className="mb-1 text-center text-3xl font-extrabold text-balance filter md:text-4xl md:font-bold lg:text-left dark:drop-shadow-[0_4px_8px_rgba(59,130,246,0.7)]">
-            I Build Custom Software That Makes You Stand Out, Scale Fast, &
+            We Build Custom Softwares That Makes You Stand Out, Scale Fast, &
             Systematize Everything For You
           </h1>
-          <p className="text-muted-foreground mb-3 text-center text-lg text-balance lg:text-left">
-            I turn your ideas into conversion-optimized digital platforms that
+          <p className="text-muted-foreground mb-3 text-center text-lg lg:text-left">
+            We turn your ideas into conversion-optimized digital platforms that
             grow with your brand – no tech overwhelm, just results.
           </p>
 
@@ -26,7 +26,7 @@ export default function Hero() {
           >
             Get In Touch
             <span className="text-background/80 text-xs font-medium">
-              No hard pitch. Just a real conversation
+              Turn you ideas into revenue generating machines
             </span>
           </a>
         </div>

@@ -20,17 +20,17 @@ export const metadata = {
     template: "%s - InfoBridge",
   },
   description:
-    "I build custom software that helps content creators, coaches, and infoproduct businesses stand out, scale fast, and systematize everything.",
+    "We build custom software that helps content creators, coaches, and infoproduct businesses stand out, scale fast, and systematize everything.",
   metadataBase: new URL(process.env.NEXT_PUBLIC_URL),
   alternates: {
     canonical: process.env.NEXT_PUBLIC_URL,
   },
   keywords: keywords,
   openGraph: {
-    title: "Custom Software for Creators & Coaches - 0xSzilard",
+    title: "Custom Software for Creators & Coaches - InfoBridge",
     description:
       "Helping infoproduct businesses, coaches, and creators systematize, scale, and stand out with tailored software solutions.",
-    siteName: "0xSzilard",
+    siteName: "InfoBridge",
     type: "website",
     url: process.env.NEXT_PUBLIC_URL,
     images: [
@@ -39,17 +39,17 @@ export const metadata = {
         secureUrl: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Custom Software Solutions by Szilárd",
+        alt: "Custom Software Solutions by InfoBridge",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    site: "@szilard.mate",
-    title: "Custom Software for Creators & Coaches - 0xSzilard",
+    site: "@InfoBridge",
+    title: "Custom Software for Creators & Coaches - InfoBridge",
     description:
       "Tailored software to help creators, coaches, and info businesses scale fast and systematize everything.",
-    creator: "@szilard.mate",
+    creator: "@InfoBridge",
     images: {
       url: "/twitter-image.png",
       alt: "Custom software for the creator economy",

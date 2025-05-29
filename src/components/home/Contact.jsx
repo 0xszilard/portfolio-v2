@@ -50,12 +50,12 @@ const Icons = {
 
 export default function Contact() {
   return (
-    <section id="contact" className="px-4 py-10 md:px-10">
+    <section id="contact" className="bg-background px-4 py-10 md:px-10">
       <div className="m-auto max-w-5xl">
         <section className="grid place-content-center gap-2 px-8 text-black">
           <div className="group flex items-center justify-center">
             <Icons.linkedin />
-            <FlipLink href="https://linkedin.com/in/szialrdmate">
+            <FlipLink href="https://linkedin.com/in/szilardmate">
               Linkedin
             </FlipLink>
           </div>

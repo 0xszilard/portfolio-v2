@@ -3,7 +3,7 @@ import { Badge } from "../ui/badge";
 
 export default function About() {
   return (
-    <section className="bg-muted/40 px-4 py-10 md:px-10">
+    <section className="bg-radial from-white to-gray-100 px-4 py-10 md:px-10 dark:from-black dark:to-gray-800">
       <div className="m-auto grid max-w-6xl gap-10 md:grid-cols-2 md:gap-16">
         <div>
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
