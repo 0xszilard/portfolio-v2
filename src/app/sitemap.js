@@ -1,7 +1,7 @@
 import { projects } from "@/constants";
 
-const projectEntries = projects.map((cat) => ({
-  url: `${process.env.NEXT_PUBLIC_URL}/projects/${cat.category.toLowerCase()}`,
+const projectEntries = projects.map((project) => ({
+  url: `${process.env.NEXT_PUBLIC_URL}/projects/${project.slug}`,
   lastModified: new Date(),
   priority: 0.25,
 }));
