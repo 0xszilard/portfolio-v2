@@ -8,14 +8,14 @@ export default function Footer() {
       <div className="flex items-center gap-4">
         <ThemeToggle />
         <span className="text-muted-foreground">
-          InfoBridge S.r.o. All Rights Reserved
+          InfoBridge S.R.O. All Rights Reserved
         </span>
       </div>
       <div className="flex items-center gap-4">
-        <Link className="text-muted-foreground" href="/imprint">
+        <Link className="text-muted-foreground hover:underline" href="/imprint">
           Imprint
         </Link>
-        <Link className="text-muted-foreground" href="/privacy">
+        <Link className="text-muted-foreground hover:underline" href="/privacy">
           Privacy
         </Link>
       </div>

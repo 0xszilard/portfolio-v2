@@ -10,8 +10,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { ArrowUpRight, Github, InfoIcon, TrendingUp } from "lucide-react";
-import { placeholder } from "@/app/assets";
+import { ArrowUpRight, InfoIcon, TrendingUp } from "lucide-react";
 
 export default function ProjectCard({
   title,
@@ -26,7 +25,7 @@ export default function ProjectCard({
     <Card className="overflow-hidden pt-0">
       <div className="aspect-[15/9] w-full overflow-hidden">
         <Image
-          src={image || placeholder}
+          src={image}
           alt={title}
           width={500}
           height={300}
@@ -37,7 +36,7 @@ export default function ProjectCard({
         <CardTitle>{title}</CardTitle>
         <CardDescription>{description}</CardDescription>
       </CardHeader>
-      <CardContent className="space-y-4">
+      <CardContent className="flex-grow space-y-4">
         <div>
           <div className="mb-2 flex items-center gap-2 text-sm font-medium">
             <TrendingUp className="h-4 w-4 text-green-500" />
@@ -61,7 +60,10 @@ export default function ProjectCard({
       </CardContent>
       <CardFooter className="flex justify-between gap-2">
         <Button variant="outline" size="sm" asChild>
-          <Link href={repoUrl} className="flex items-center gap-1">
+          <Link
+            href={`/projects/${repoUrl}`}
+            className="flex items-center gap-1"
+          >
             <InfoIcon className="h-3.5 w-3.5" />
             <span>Read More</span>
           </Link>

@@ -3,6 +3,9 @@ import { ThemeProvider } from "@/components/ui/theme-provider";
 import "./globals.css";
 import Footer from "@/components/ui/footer";
 import { keywords } from "@/constants";
+import GoogleTag from "@/components/ui/GoogleTag";
+import CookieBanner from "@/components/ui/cookie-banner";
+import Navbar from "@/components/ui/navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -73,6 +76,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      {process.env.NEXT_PUBLIC_VERCEL_ENV === "production" && (
+        <GoogleTag gaId={process.env.NEXT_PUBLIC_GA_ID} />
+      )}
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
@@ -82,8 +88,10 @@ export default function RootLayout({ children }) {
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <Navbar />
+          <main className="mt-15">{children}</main>
           <Footer />
+          <CookieBanner />
         </ThemeProvider>
       </body>
     </html>

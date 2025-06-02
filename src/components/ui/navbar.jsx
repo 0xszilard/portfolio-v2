@@ -1,19 +1,48 @@
-import React from "react";
-import { ThemeToggle } from "./theme-toggle";
-import { Button } from "./button";
+"use client";
+
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Navbar() {
+  const [show, setShow] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentY = window.scrollY;
+
+      if (currentY > lastScrollY && currentY > 50) {
+        setShow(false); // scrolling down
+      } else {
+        setShow(true); // scrolling up
+      }
+
+      setLastScrollY(currentY);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
+
   return (
-    <header className="fixed top-0 left-0 z-50 w-full p-4">
-      <nav className="bg-background/50 m-auto flex max-w-lg items-center justify-between rounded-full border p-2 backdrop-blur-md">
-        <span className="ml-3 text-sm font-semibold">Website</span>
-        <div className="flex items-center gap-1">
-          <Button variant="ghost">Home</Button>
-          <Button variant="ghost">Home</Button>
-          <Button variant="ghost">Home</Button>
-          <ThemeToggle />
-        </div>
-      </nav>
-    </header>
+    <motion.nav
+      initial={{ y: 0 }}
+      animate={{ y: show ? 0 : -80 }}
+      transition={{ duration: 0.25, ease: "easeOut" }}
+      className="fixed top-0 left-0 z-50 flex w-full items-center justify-between bg-white px-6 py-4 shadow"
+    >
+      <Link href="/" className="text-xl font-bold">
+        MySite
+      </Link>
+      <div className="space-x-6 text-sm">
+        <Link className="font-medium hover:underline" href="/about">
+          About
+        </Link>
+        <Link className="font-medium hover:underline" href="/projects">
+          Projects
+        </Link>
+      </div>
+    </motion.nav>
   );
 }

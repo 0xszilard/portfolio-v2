@@ -60,18 +60,20 @@ export default async function Faq() {
           </h2>
           <Accordion collapsible type="single">
             {faqs.map((q) => (
-              <AccordionItem value={q.id} key={q.question}>
-                <AccordionTrigger className="text-lg">
+              <AccordionItem value={q.question} key={q.question}>
+                <AccordionTrigger className="text-xl">
                   {q.question}
                 </AccordionTrigger>
-                <AccordionContent>{q.answer}</AccordionContent>
+                <AccordionContent className="text-muted-foreground text-lg">
+                  {q.answer}
+                </AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
         </div>
         <a
           href="/#contact"
-          className="mx-auto flex w-fit transform cursor-pointer flex-col rounded-lg border-2 border-gray-600 bg-gradient-to-t from-gray-800 to-gray-600 px-4 py-2 text-center font-semibold text-white shadow-md transition-all duration-150 ease-in-out hover:scale-102 active:scale-95 dark:border-gray-100 dark:from-gray-300 dark:to-gray-100 dark:text-black"
+          className="mx-auto flex w-fit transform cursor-pointer flex-col rounded-lg border-2 border-gray-600 bg-gradient-to-t from-gray-800 to-gray-600 px-4 py-2 text-center font-semibold text-white shadow-md transition-all duration-150 ease-in-out hover:opacity-90 active:scale-95 dark:border-gray-100 dark:from-gray-300 dark:to-gray-100 dark:text-black"
         >
           Get In Touch
           <span className="text-background/80 text-xs font-medium">

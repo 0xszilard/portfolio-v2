@@ -50,7 +50,7 @@ const Icons = {
 
 export default function Contact() {
   return (
-    <section id="contact" className="bg-background px-4 py-10 md:px-10">
+    <section className="bg-background relative px-4 py-10 md:px-10">
       <div className="m-auto max-w-5xl">
         <section className="grid place-content-center gap-2 px-8 text-black">
           <div className="group flex items-center justify-center">
@@ -65,6 +65,7 @@ export default function Contact() {
           </div>
         </section>
       </div>
+      <div className="fade-top-lg pointer-events-none absolute inset-0 z-50 shadow-[0_-16px_128px_0_var(--brand-foreground)_inset,0_-16px_32px_0_var(--brand)_inset]"></div>
     </section>
   );
 }
