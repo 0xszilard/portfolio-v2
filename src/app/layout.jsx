@@ -20,8 +20,8 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: {
-    default: "Custom Software for Creators & Coaches",
-    template: "%s - InfoBridge",
+    default: "Custom Software for Creators & Coaches - InfoBridge",
+    template: "%s | InfoBridge - Software & Consulting for Online Creators",
   },
   description:
     "We build custom software that helps content creators, coaches, and infoproduct businesses stand out, scale fast, and systematize everything.",
@@ -77,18 +77,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      {process.env.NEXT_PUBLIC_VERCEL_ENV === "production" && (
-        <GoogleTag gaId={process.env.NEXT_PUBLIC_GA_ID} />
-      )}
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
+      {process.env.NEXT_PUBLIC_VERCEL_ENV === "production" && <GoogleTag gaId={process.env.NEXT_PUBLIC_GA_ID} />}
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <Navbar />
           <main className="mt-15">{children}</main>
           <Footer />

@@ -7,36 +7,39 @@ import { ArrowRight, Award, Users, Target, Zap, Quote } from "lucide-react";
 import { placeholder } from "@/assets";
 
 export const metadata = {
-  title: "",
-  description: "",
+  title: "About Us",
+  description:
+    "InfoBridge helps online creators scale with custom software tools, automation, and expert consulting. Learn more about our mission, values, and team.",
   alternates: {
     canonical: `${process.env.NEXT_PUBLIC_URL}/about`,
   },
   openGraph: {
-    title: "",
-    description: "",
+    title: "About InfoBridge | Custom Software for Creators",
+    description:
+      "Meet the team behind InfoBridge. We build powerful, tailored tech for online creators - from automations to full SaaS platforms.",
     siteName: "InfoBridge",
     type: "website",
-    url: process.env.NEXT_PUBLIC_URL,
+    url: `${process.env.NEXT_PUBLIC_URL}/about`,
     images: [
       {
         url: "/opengraph-image.png",
         secureUrl: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "",
+        alt: "InfoBridge - Meet the team behind the software",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     site: "@InfoBridge",
-    title: "",
-    description: "",
+    title: "About InfoBridge | Software & Consulting for Creators",
+    description:
+      "At InfoBridge, we empower creators with smart tech solutions. Get to know our story and why we build tools creators love.",
     creator: "@InfoBridge",
     images: {
       url: "/twitter-image.png",
-      alt: "",
+      alt: "InfoBridge - Custom Software & Consulting for Creators",
     },
   },
   robots: {
@@ -71,9 +74,8 @@ export default function AboutPage() {
             </span>
           </h1>
           <p className="text-muted-foreground mx-auto max-w-2xl text-lg md:text-xl">
-            Founded by experienced developers who understand the challenges of
-            scaling digital products. We've helped over 150 companies transform
-            their ideas into profitable web applications.
+            Founded by experienced developers who understand the challenges of scaling digital products. We've helped
+            over 150 companies transform their ideas into profitable web applications.
           </p>
         </div>
       </section>
@@ -83,27 +85,20 @@ export default function AboutPage() {
         <div className="container m-auto px-4 py-16 md:px-6 md:py-20">
           <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
             <div className="space-y-6">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
-                Our Story
-              </h2>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Our Story</h2>
               <div className="text-muted-foreground space-y-4">
                 <p>
-                  Started in 2019 by three senior developers who were frustrated
-                  with agencies that over-promised and under-delivered. We saw
-                  too many businesses struggle with slow, expensive development
-                  cycles that didn't deliver real business value.
+                  Started in 2019 by three senior developers who were frustrated with agencies that over-promised and
+                  under-delivered. We saw too many businesses struggle with slow, expensive development cycles that
+                  didn't deliver real business value.
                 </p>
                 <p>
-                  Our mission became simple: build high-quality web applications
-                  faster and more cost-effectively than traditional agencies,
-                  while maintaining the highest standards of code quality and
-                  user experience.
+                  Our mission became simple: build high-quality web applications faster and more cost-effectively than
+                  traditional agencies, while maintaining the highest standards of code quality and user experience.
                 </p>
                 <p>
-                  Today, we're a team of 15 specialists who have delivered over
-                  200 projects, helping startups raise $50M+ in funding and
-                  enterprises increase their digital revenue by an average of
-                  2.5x.
+                  Today, we're a team of 15 specialists who have delivered over 200 projects, helping startups raise
+                  $50M+ in funding and enterprises increase their digital revenue by an average of 2.5x.
                 </p>
               </div>
               <div className="flex flex-col gap-3 sm:flex-row">
@@ -134,12 +129,9 @@ export default function AboutPage() {
       {/* Values Section */}
       <section className="px-4 py-16 md:px-6 md:py-20">
         <div className="container m-auto mb-12 space-y-6 text-center">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
-            What Drives Us
-          </h2>
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">What Drives Us</h2>
           <p className="text-muted-foreground mx-auto max-w-2xl">
-            Our core values shape every project we take on and every
-            relationship we build.
+            Our core values shape every project we take on and every relationship we build.
           </p>
         </div>
         <div className="grid gap-8 md:grid-cols-3">
@@ -148,13 +140,10 @@ export default function AboutPage() {
               <div className="bg-primary/10 flex h-12 w-12 items-center justify-center rounded-lg">
                 <Zap className="text-primary h-6 w-6" />
               </div>
-              <h3 className="text-xl font-semibold">
-                Speed Without Compromise
-              </h3>
+              <h3 className="text-xl font-semibold">Speed Without Compromise</h3>
               <p className="text-muted-foreground">
-                We deliver fast without cutting corners. Our proven processes
-                and modern tech stack enable rapid development while maintaining
-                enterprise-grade quality.
+                We deliver fast without cutting corners. Our proven processes and modern tech stack enable rapid
+                development while maintaining enterprise-grade quality.
               </p>
             </CardContent>
           </Card>
@@ -165,9 +154,8 @@ export default function AboutPage() {
               </div>
               <h3 className="text-xl font-semibold">Business-First Approach</h3>
               <p className="text-muted-foreground">
-                Every technical decision is made with your business goals in
-                mind. We focus on features that drive revenue and user
-                engagement, not just cool technology.
+                Every technical decision is made with your business goals in mind. We focus on features that drive
+                revenue and user engagement, not just cool technology.
               </p>
             </CardContent>
           </Card>
@@ -178,9 +166,8 @@ export default function AboutPage() {
               </div>
               <h3 className="text-xl font-semibold">True Partnership</h3>
               <p className="text-muted-foreground">
-                We're not just vendors—we're your technical co-founders. We
-                invest in your success and provide ongoing strategic guidance
-                beyond just development.
+                We're not just vendors—we're your technical co-founders. We invest in your success and provide ongoing
+                strategic guidance beyond just development.
               </p>
             </CardContent>
           </Card>
@@ -191,35 +178,24 @@ export default function AboutPage() {
       <section id="team" className="bg-muted/30 border-t">
         <div className="m-auto max-w-6xl px-4 py-16 md:px-6 md:py-20">
           <div className="mb-12 space-y-6 text-center">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
-              Meet Our Team
-            </h2>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Meet Our Team</h2>
             <p className="text-muted-foreground mx-auto max-w-2xl">
-              Senior developers and designers with 10+ years of experience
-              building products for startups and Fortune 500 companies.
+              Senior developers and designers with 10+ years of experience building products for startups and Fortune
+              500 companies.
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             <Card>
               <CardContent className="space-y-4 p-6 text-center">
                 <div className="mx-auto h-24 w-24 overflow-hidden rounded-full">
-                  <Image
-                    src={placeholder}
-                    width={96}
-                    height={96}
-                    alt="Sarah Chen"
-                    className="object-cover"
-                  />
+                  <Image src={placeholder} width={96} height={96} alt="Sarah Chen" className="object-cover" />
                 </div>
                 <div>
                   <h3 className="font-semibold">Sarah Chen</h3>
-                  <p className="text-muted-foreground text-sm">
-                    Co-Founder & CTO
-                  </p>
+                  <p className="text-muted-foreground text-sm">Co-Founder & CTO</p>
                 </div>
                 <p className="text-muted-foreground text-sm">
-                  Former Senior Engineer at Google. Specializes in scalable
-                  architecture and performance optimization.
+                  Former Senior Engineer at Google. Specializes in scalable architecture and performance optimization.
                 </p>
                 <div className="flex flex-wrap justify-center gap-1">
                   <Badge variant="secondary" className="text-xs">
@@ -237,23 +213,15 @@ export default function AboutPage() {
             <Card>
               <CardContent className="space-y-4 p-6 text-center">
                 <div className="mx-auto h-24 w-24 overflow-hidden rounded-full">
-                  <Image
-                    src={placeholder}
-                    width={96}
-                    height={96}
-                    alt="Marcus Rodriguez"
-                    className="object-cover"
-                  />
+                  <Image src={placeholder} width={96} height={96} alt="Marcus Rodriguez" className="object-cover" />
                 </div>
                 <div>
                   <h3 className="font-semibold">Marcus Rodriguez</h3>
-                  <p className="text-muted-foreground text-sm">
-                    Co-Founder & CEO
-                  </p>
+                  <p className="text-muted-foreground text-sm">Co-Founder & CEO</p>
                 </div>
                 <p className="text-muted-foreground text-sm">
-                  Ex-Stripe Product Manager. Focuses on user experience and
-                  product strategy for maximum business impact.
+                  Ex-Stripe Product Manager. Focuses on user experience and product strategy for maximum business
+                  impact.
                 </p>
                 <div className="flex flex-wrap justify-center gap-1">
                   <Badge variant="secondary" className="text-xs">
@@ -271,23 +239,14 @@ export default function AboutPage() {
             <Card>
               <CardContent className="space-y-4 p-6 text-center">
                 <div className="mx-auto h-24 w-24 overflow-hidden rounded-full">
-                  <Image
-                    src={placeholder}
-                    width={96}
-                    height={96}
-                    alt="Alex Thompson"
-                    className="object-cover"
-                  />
+                  <Image src={placeholder} width={96} height={96} alt="Alex Thompson" className="object-cover" />
                 </div>
                 <div>
                   <h3 className="font-semibold">Alex Thompson</h3>
-                  <p className="text-muted-foreground text-sm">
-                    Lead Full-Stack Developer
-                  </p>
+                  <p className="text-muted-foreground text-sm">Lead Full-Stack Developer</p>
                 </div>
                 <p className="text-muted-foreground text-sm">
-                  Former Airbnb engineer with expertise in building high-traffic
-                  applications and complex integrations.
+                  Former Airbnb engineer with expertise in building high-traffic applications and complex integrations.
                 </p>
                 <div className="flex flex-wrap justify-center gap-1">
                   <Badge variant="secondary" className="text-xs">
@@ -313,9 +272,8 @@ export default function AboutPage() {
             <div className="mx-auto max-w-3xl space-y-6 text-center">
               <Quote className="mx-auto h-12 w-12 opacity-50" />
               <blockquote className="text-xl font-medium md:text-2xl">
-                "They delivered our MVP in 3 weeks and helped us raise $2M in
-                Series A. The quality of their work and speed of delivery was
-                incredible. They truly understand what startups need."
+                "They delivered our MVP in 3 weeks and helped us raise $2M in Series A. The quality of their work and
+                speed of delivery was incredible. They truly understand what startups need."
               </blockquote>
               <div className="space-y-2">
                 <div className="font-semibold">Jennifer Walsh</div>
@@ -330,34 +288,24 @@ export default function AboutPage() {
       <section className="bg-muted/30 border-t px-4 py-16 md:px-6 md:py-20">
         <div className="container m-auto">
           <div className="mb-12 space-y-6 text-center">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
-              Our Track Record
-            </h2>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Our Track Record</h2>
           </div>
           <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
             <div className="space-y-2 text-center">
               <div className="text-primary text-4xl font-bold">200+</div>
-              <div className="text-muted-foreground text-sm">
-                Projects Delivered
-              </div>
+              <div className="text-muted-foreground text-sm">Projects Delivered</div>
             </div>
             <div className="space-y-2 text-center">
               <div className="text-primary text-4xl font-bold">$50M+</div>
-              <div className="text-muted-foreground text-sm">
-                Client Funding Raised
-              </div>
+              <div className="text-muted-foreground text-sm">Client Funding Raised</div>
             </div>
             <div className="space-y-2 text-center">
               <div className="text-primary text-4xl font-bold">2.5x</div>
-              <div className="text-muted-foreground text-sm">
-                Average ROI Increase
-              </div>
+              <div className="text-muted-foreground text-sm">Average ROI Increase</div>
             </div>
             <div className="space-y-2 text-center">
               <div className="text-primary text-4xl font-bold">98%</div>
-              <div className="text-muted-foreground text-sm">
-                Client Satisfaction
-              </div>
+              <div className="text-muted-foreground text-sm">Client Satisfaction</div>
             </div>
           </div>
         </div>
@@ -366,12 +314,9 @@ export default function AboutPage() {
       {/* CTA Section */}
       <section className="px-4 py-16 md:px-6 md:py-20">
         <div className="container mx-auto space-y-6 text-center">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
-            Ready to Build Something Amazing?
-          </h2>
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Ready to Build Something Amazing?</h2>
           <p className="text-muted-foreground text-lg">
-            Let's discuss your project and see how we can help you achieve your
-            business goals.
+            Let's discuss your project and see how we can help you achieve your business goals.
           </p>
           <div className="flex flex-col justify-center gap-3 sm:flex-row">
             <Button size="lg">
