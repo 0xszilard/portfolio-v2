@@ -1,9 +1,10 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, ExternalLink, TrendingUp, Users, Clock, Star } from "lucide-react";
 import { placeholder } from "@/assets";
+import { projects } from "@/constants";
 
 export const metadata = {
   title: "Projects",
@@ -58,7 +59,7 @@ export const metadata = {
 
 export default function ProjectsPage() {
   return (
-    <main className="flex min-h-screen flex-col">
+    <>
       {/* Hero Section */}
       <section className="container m-auto px-4 py-16 md:px-6 md:py-24">
         <div className="mx-auto max-w-3xl space-y-6 text-center">
@@ -68,7 +69,7 @@ export default function ProjectsPage() {
           </Badge>
           <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
             Projects That Drive{" "}
-            <span className="from-primary to-primary/60 bg-gradient-to-r bg-clip-text text-transparent">
+            <span className="from-primary to-primary/60 bg-gradient-to-r bg-clip-text pr-2 text-transparent">
               Real Results
             </span>
           </h1>
@@ -80,28 +81,26 @@ export default function ProjectsPage() {
       </section>
 
       {/* Filter Tabs */}
-      <section className="border-b">
-        <div className="px-4 md:px-6">
-          <div className="flex gap-6 overflow-x-auto pb-4">
-            <Button variant="default" size="sm">
-              All Projects
-            </Button>
-            <Button variant="ghost" size="sm">
-              SaaS Platforms
-            </Button>
-            <Button variant="ghost" size="sm">
-              E-commerce
-            </Button>
-            <Button variant="ghost" size="sm">
-              Fintech
-            </Button>
-            <Button variant="ghost" size="sm">
-              Healthcare
-            </Button>
-            <Button variant="ghost" size="sm">
-              Marketplaces
-            </Button>
-          </div>
+      <section className="border-b px-4 md:px-6">
+        <div className="m-auto flex w-fit gap-6 overflow-x-auto pb-4">
+          <Button variant="default" size="sm">
+            All Projects
+          </Button>
+          <Button variant="ghost" size="sm">
+            SaaS Platforms
+          </Button>
+          <Button variant="ghost" size="sm">
+            E-commerce
+          </Button>
+          <Button variant="ghost" size="sm">
+            Fintech
+          </Button>
+          <Button variant="ghost" size="sm">
+            Healthcare
+          </Button>
+          <Button variant="ghost" size="sm">
+            Marketplaces
+          </Button>
         </div>
       </section>
 
@@ -140,14 +139,8 @@ export default function ProjectsPage() {
                 <Badge variant="outline">Stripe</Badge>
               </div>
               <div className="flex gap-3">
-                <Button>
-                  View Full Case Study
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-                <Button variant="outline">
-                  Live Demo
-                  <ExternalLink className="ml-2 h-4 w-4" />
-                </Button>
+                <Button>View Full Case Study</Button>
+                <Button variant="outline">Live Demo</Button>
               </div>
             </div>
             <div className="relative">
@@ -162,20 +155,20 @@ export default function ProjectsPage() {
       {/* Projects Grid */}
       <section className="container m-auto px-4 py-16 md:px-6 md:py-20">
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {[...Array(6)].map((_, idx) => (
+          {projects.map((p, idx) => (
             <Card key={idx} className="group pt-0 transition-shadow hover:shadow-lg">
               <CardHeader className="p-0">
                 <div className="aspect-video overflow-hidden rounded-t-lg">
                   <Image
-                    src={placeholder}
+                    src={p.image || placeholder}
                     width={350}
                     height={200}
-                    alt="LearnHub Platform"
-                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    alt={p.title}
+                    className="w-full object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
               </CardHeader>
-              <CardContent className="space-y-4">
+              <CardContent className="flex-grow space-y-4">
                 <div className="flex items-center justify-between">
                   <Badge variant="secondary">EdTech</Badge>
                   <div className="text-muted-foreground flex items-center gap-1 text-sm">
@@ -183,11 +176,8 @@ export default function ProjectsPage() {
                     10 weeks
                   </div>
                 </div>
-                <h3 className="text-xl font-semibold">LearnHub LMS</h3>
-                <p className="text-muted-foreground text-sm">
-                  Comprehensive learning management system with video streaming, progress tracking, and AI-powered
-                  recommendations. Serves 25k+ students globally.
-                </p>
+                <h3 className="text-xl font-semibold">{p.title}</h3>
+                <p className="text-muted-foreground text-sm">{p.description}</p>
                 <div className="grid grid-cols-2 gap-4 text-sm">
                   <div className="flex items-center gap-2">
                     <TrendingUp className="h-4 w-4 text-green-500" />
@@ -199,21 +189,19 @@ export default function ProjectsPage() {
                   </div>
                 </div>
                 <div className="flex flex-wrap gap-1">
-                  <Badge variant="outline" className="text-xs">
-                    Next.js
-                  </Badge>
-                  <Badge variant="outline" className="text-xs">
-                    AI/ML
-                  </Badge>
-                  <Badge variant="outline" className="text-xs">
-                    Video
-                  </Badge>
+                  {p.technologies.map((i) => (
+                    <Badge key={i} variant="outline" className="text-xs">
+                      {i}
+                    </Badge>
+                  ))}
                 </div>
+              </CardContent>
+              <CardFooter>
                 <Button variant="outline" className="w-full">
                   View Case Study
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                  <ArrowRight size={16} />
                 </Button>
-              </CardContent>
+              </CardFooter>
             </Card>
           ))}
         </div>
@@ -259,12 +247,8 @@ export default function ProjectsPage() {
                 Join 200+ successful companies who've transformed their business with our development expertise.
               </p>
               <div className="flex flex-col justify-center gap-3 sm:flex-row">
-                <Button size="lg" variant="secondary">
-                  Get Free Project Quote
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
+                <Button variant="secondary">Get Free Project Quote</Button>
                 <Button
-                  size="lg"
                   variant="outline"
                   className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
                 >
@@ -275,6 +259,6 @@ export default function ProjectsPage() {
           </CardContent>
         </Card>
       </section>
-    </main>
+    </>
   );
 }

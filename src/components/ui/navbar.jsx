@@ -42,9 +42,7 @@ export default function Navbar() {
         <Link className="font-medium hover:underline" href="/projects">
           Projects
         </Link>
-        <Link className="font-medium hover:underline" href="/testimonials">
-          Testimonials
-        </Link>
+
         <Link className="font-medium hover:underline" href="/blog">
           Blog
         </Link>

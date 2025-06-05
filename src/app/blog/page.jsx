@@ -90,13 +90,15 @@ const latestPosts = [
 
 export const metadata = {
   title: "Blog",
-  description: "",
+  description:
+    "Get actionable tips, tutorials, and insights on software, automation, and growth strategies for online creators. Written by the team at InfoBridge.",
   alternates: {
     canonical: `${process.env.NEXT_PUBLIC_URL}/blog`,
   },
   openGraph: {
-    title: "",
-    description: "",
+    title: "InfoBridge Blog | Smart Tech for Online Creators",
+    description:
+      "Explore the InfoBridge blog for practical guides, case studies, and strategies that help creators turn ideas into scalable tech.",
     siteName: "InfoBridge",
     type: "website",
     url: process.env.NEXT_PUBLIC_URL,
@@ -106,19 +108,20 @@ export const metadata = {
         secureUrl: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "",
+        alt: "InfoBridge Blog - Software & Growth Tips for Creators",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     site: "@InfoBridge",
-    title: "",
-    description: "",
+    title: "InfoBridge Blog | Tips, Tools & Strategy for Creators",
+    description:
+      "Discover how creators use software and automation to grow. Get expert insights and tech tutorials from the InfoBridge team.",
     creator: "@InfoBridge",
     images: {
       url: "/twitter-image.png",
-      alt: "",
+      alt: "InfoBridge Blog - Tech & Growth for Online Creators",
     },
   },
   robots: {
@@ -140,8 +143,8 @@ export default function BlogPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="container m-auto px-4 py-16 md:px-6 md:py-24">
-        <div className="mx-auto max-w-3xl space-y-6 text-center">
+      <section className="px-4 py-16 md:px-6 md:py-24">
+        <div className="container mx-auto max-w-3xl space-y-6 text-center">
           <Badge variant="secondary" className="mx-auto w-fit">
             <TrendingUp className="mr-2 h-3 w-3" />
             Weekly Development Insights

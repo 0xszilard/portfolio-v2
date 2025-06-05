@@ -1,13 +1,4 @@
-import {
-  admin,
-  bbe,
-  crew_dark,
-  crew_light,
-  scaleinsta,
-  sec_dark,
-  sec_light,
-  voyagio,
-} from "@/assets";
+import { admin, bbe, crew_dark, crew_light, scaleinsta, sec_dark, sec_light, voyagio } from "@/assets";
 
 export const keywords = [
   "web developer",
@@ -42,8 +33,7 @@ export const projects = [
   },
   {
     title: "Healthcare Patient Portal",
-    description:
-      "Built a GDPR & HIPAA-compliant, multi tenant user management system with real time analytics",
+    description: "Built a GDPR & HIPAA-compliant, multi tenant user management system with real time analytics",
     image: admin,
     outcomes: [
       "Reduced admin workload by 32 hours/week",
@@ -56,8 +46,7 @@ export const projects = [
   },
   {
     title: "BBE Insider",
-    description:
-      "Full-stack learning management software & mock exam platform for the WU's BBE program.",
+    description: "Full-stack learning management software & mock exam platform for the WU's BBE program.",
     image: bbe,
     outcomes: [
       "€320,000+ project evaluation",
@@ -68,11 +57,9 @@ export const projects = [
     liveUrl: "https://bbe-insider.com",
     slug: "bbe-insider",
   },
-
   {
     title: "Crew",
-    description:
-      "Developed a real-time tracking system for a logistics company's fleet",
+    description: "Developed a real-time tracking system for a logistics company's fleet",
     image: crew_light,
     outcomes: [
       "Reduced fuel costs by 22%",
@@ -85,8 +72,7 @@ export const projects = [
   },
   {
     title: "ScaleInsta / Hydrogen",
-    description:
-      "Designed and developed a high-converting marketing site for a SaaS startup",
+    description: "Designed and developed a high-converting marketing site for a SaaS startup",
     image: scaleinsta,
     outcomes: [
       "189% increase in lead generation",

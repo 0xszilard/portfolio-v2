@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 
-export default function RootLayout({ children }) {
+export default function Loader({ children }) {
   const [loading, setLoading] = useState(true);
   const [showLoader, setShowLoader] = useState(true);
   const gridControls = useAnimation();
@@ -58,10 +58,7 @@ export default function RootLayout({ children }) {
           className="fixed inset-0 z-50 flex items-center justify-center overflow-hidden bg-black"
         >
           {/* Perspective container for 3D tunnel */}
-          <div
-            className="relative h-full w-full"
-            style={{ perspective: "900px", transformStyle: "preserve-3d" }}
-          >
+          <div className="relative h-full w-full" style={{ perspective: "900px", transformStyle: "preserve-3d" }}>
             {/* Animated grid plane */}
             <motion.div
               className="absolute inset-0 flex items-center justify-center"
@@ -108,9 +105,7 @@ export default function RootLayout({ children }) {
               style={{ width: "150px", height: "150px" }}
             >
               <div className="absolute inset-0 flex items-center justify-center">
-                <p className="font-mono text-sm tracking-wide text-blue-300">
-                  Loading
-                </p>
+                <p className="font-mono text-sm tracking-wide text-blue-300">Loading</p>
               </div>
             </motion.div>
           </div>
