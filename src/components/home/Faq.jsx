@@ -53,7 +53,7 @@ export default async function Faq() {
 
   return (
     <>
-      <section className="bg-muted px-4 py-10">
+      <section className="bg-muted via-muted to-background from-background bg-gradient-to-b px-4 py-10">
         <div className="m-auto mb-8 max-w-3xl">
           <h2 className="mb-6 text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
             Your most asked questions...

@@ -3,28 +3,23 @@ import { Badge } from "../ui/badge";
 
 export default function About() {
   return (
-    <section className="bg-radial from-white to-gray-100 px-4 py-10 md:px-10 dark:from-black dark:to-gray-800">
+    <section className="border-y bg-radial from-white to-gray-100 px-4 py-10 md:px-10 dark:from-black dark:to-gray-800">
       <div className="m-auto grid max-w-6xl gap-10 md:grid-cols-2 md:gap-16">
         <div>
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-            About Us
-          </h2>
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">About Us</h2>
           <p className="text-muted-foreground mt-4 md:text-lg">
-            We’re a full-stack development agency with over 7 years of
-            experience delivering web and mobile solutions that generate
-            tangible business impact. Our process begins with understanding your
-            strategic goals—then translating them into performant, scalable
-            technology.
+            We’re a full-stack development agency with over 7 years of experience delivering web and mobile solutions
+            that generate tangible business impact. Our process begins with understanding your strategic goals—then
+            translating them into performant, scalable technology.
           </p>
           <p className="text-muted-foreground mt-4 md:text-lg">
-            From early-stage startups to enterprise clients, our team has
-            successfully launched products that have generated more than $4.2M
-            in client revenue—while saving time and costs through intelligent
-            automation and optimization.
+            From early-stage startups to enterprise clients, our team has successfully launched products that have
+            generated more than $4.2M in client revenue—while saving time and costs through intelligent automation and
+            optimization.
           </p>
           <p className="text-muted-foreground mt-4 md:text-lg">
-            Beyond development, we’re passionate about mentoring, contributing
-            to the tech community, and staying at the forefront of innovation.
+            Beyond development, we’re passionate about mentoring, contributing to the tech community, and staying at the
+            forefront of innovation.
           </p>
         </div>
         <div className="space-y-6">

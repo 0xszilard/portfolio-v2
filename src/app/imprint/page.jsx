@@ -4,7 +4,7 @@ export const metadata = {
   title: "Imprint",
   description: "Privacy policy for InfoBridge",
   alternates: {
-    canonical: `${process.env.NEXT_PUBLIC_URL}/privacy`,
+    canonical: `${process.env.NEXT_PUBLIC_URL}/imprint`,
   },
 };
 

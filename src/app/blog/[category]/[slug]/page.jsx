@@ -1,10 +1,10 @@
-export async function generateMetadata({ params }) {
+export async function generateMetadata() {
   return {
     title: "",
     description: "",
 
     alternates: {
-      canonical: `${process.env.NEXT_PUBLIC_URL}/projects/${project.slug}`,
+      canonical: `${process.env.NEXT_PUBLIC_URL}/blog/${category}/${post.slug}`,
     },
     openGraph: {
       title: "",
@@ -49,6 +49,6 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export default function ProjectPage({ params }) {
+export default function BlogPostPage() {
   return <></>;
 }

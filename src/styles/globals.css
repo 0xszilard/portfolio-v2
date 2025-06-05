@@ -45,8 +45,8 @@
 }
 
 .dark {
-  --brand: oklch(0.5727 0.2294 20);
-  --brand-foreground: oklch(0.6982 0.1535 20.51);
+  --brand: oklch(68.5% 0.211 40.9deg);
+  --brand-foreground: oklch(68.5% 0.211 40.9deg);
 
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);

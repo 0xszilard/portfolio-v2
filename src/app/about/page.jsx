@@ -6,11 +6,59 @@ import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Award, Users, Target, Zap, Quote } from "lucide-react";
 import { placeholder } from "@/assets";
 
+export const metadata = {
+  title: "",
+  description: "",
+  alternates: {
+    canonical: `${process.env.NEXT_PUBLIC_URL}/about`,
+  },
+  openGraph: {
+    title: "",
+    description: "",
+    siteName: "InfoBridge",
+    type: "website",
+    url: process.env.NEXT_PUBLIC_URL,
+    images: [
+      {
+        url: "/opengraph-image.png",
+        secureUrl: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@InfoBridge",
+    title: "",
+    description: "",
+    creator: "@InfoBridge",
+    images: {
+      url: "/twitter-image.png",
+      alt: "",
+    },
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: false,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+};
+
 export default function AboutPage() {
   return (
     <main className="flex min-h-screen flex-col">
       {/* Hero Section */}
-      <section className="container px-4 py-16 md:px-6 md:py-24">
+      <section className="container m-auto px-4 py-16 md:px-6 md:py-24">
         <div className="mx-auto max-w-3xl space-y-6 text-center">
           <Badge variant="secondary" className="mx-auto w-fit">
             <Award className="mr-2 h-3 w-3" />
@@ -32,7 +80,7 @@ export default function AboutPage() {
 
       {/* Story Section */}
       <section className="bg-muted/30 border-t">
-        <div className="container px-4 py-16 md:px-6 md:py-20">
+        <div className="container m-auto px-4 py-16 md:px-6 md:py-20">
           <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
             <div className="space-y-6">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
@@ -84,8 +132,8 @@ export default function AboutPage() {
       </section>
 
       {/* Values Section */}
-      <section className="container px-4 py-16 md:px-6 md:py-20">
-        <div className="mb-12 space-y-6 text-center">
+      <section className="px-4 py-16 md:px-6 md:py-20">
+        <div className="container m-auto mb-12 space-y-6 text-center">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
             What Drives Us
           </h2>
@@ -141,7 +189,7 @@ export default function AboutPage() {
 
       {/* Team Section */}
       <section id="team" className="bg-muted/30 border-t">
-        <div className="container px-4 py-16 md:px-6 md:py-20">
+        <div className="m-auto max-w-6xl px-4 py-16 md:px-6 md:py-20">
           <div className="mb-12 space-y-6 text-center">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
               Meet Our Team
@@ -259,8 +307,8 @@ export default function AboutPage() {
       </section>
 
       {/* Testimonial Section */}
-      <section className="container px-4 py-16 md:px-6 md:py-20">
-        <Card className="bg-primary text-primary-foreground">
+      <section className="px-4 py-16 md:px-6 md:py-20">
+        <Card className="bg-primary text-primary-foreground container mx-auto">
           <CardContent className="p-8 md:p-12">
             <div className="mx-auto max-w-3xl space-y-6 text-center">
               <Quote className="mx-auto h-12 w-12 opacity-50" />
@@ -279,8 +327,8 @@ export default function AboutPage() {
       </section>
 
       {/* Stats Section */}
-      <section className="bg-muted/30 border-t">
-        <div className="container px-4 py-16 md:px-6 md:py-20">
+      <section className="bg-muted/30 border-t px-4 py-16 md:px-6 md:py-20">
+        <div className="container m-auto">
           <div className="mb-12 space-y-6 text-center">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
               Our Track Record
@@ -316,8 +364,8 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="container px-4 py-16 md:px-6 md:py-20">
-        <div className="mx-auto max-w-3xl space-y-6 text-center">
+      <section className="px-4 py-16 md:px-6 md:py-20">
+        <div className="container mx-auto space-y-6 text-center">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
             Ready to Build Something Amazing?
           </h2>

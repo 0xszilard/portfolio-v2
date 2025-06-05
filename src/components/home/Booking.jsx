@@ -2,10 +2,11 @@
 import React from "react";
 import { InlineWidget } from "react-calendly";
 import { Badge } from "../ui/badge";
+import { Card } from "../ui/card";
 
 export default function Booking() {
   return (
-    <section id="contact" className="px-4 py-10 dark:bg-black">
+    <section id="contact" className="px-4 py-10">
       <div className="m-auto grid max-w-5xl grid-cols-1 gap-8 md:grid-cols-2">
         <div>
           <Badge className="mb-2">SCHEDULE YOUR CALL WITH US</Badge>
@@ -57,19 +58,21 @@ export default function Booking() {
             </li>
           </ol>
         </div>
-        <InlineWidget
-          className="dark:invert"
-          pageSettings={{
-            backgroundColor: "FFFFFF",
-            hideEventTypeDetails: true,
-            hideLandingPageDetails: true,
-            primaryColor: "00a2ff",
-            textColor: "1B1714",
-            resize: true,
-            hideGdprBanner: true,
-          }}
-          url="https://calendly.com/infobridge-dev/consulting"
-        />
+        <Card className="flex-grow overflow-hidden p-0">
+          <InlineWidget
+            className="h-full dark:invert"
+            pageSettings={{
+              backgroundColor: "FFFFFF",
+              hideEventTypeDetails: true,
+              hideLandingPageDetails: true,
+              primaryColor: "00a2ff",
+              textColor: "1B1714",
+              resize: true,
+              hideGdprBanner: true,
+            }}
+            url="https://calendly.com/infobridge-dev/consulting"
+          />
+        </Card>
       </div>
     </section>
   );

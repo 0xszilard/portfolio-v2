@@ -10,39 +10,32 @@ export default function Hero() {
         <div className="from-background to-background/0 absolute top-0 left-0 z-10 h-10 w-full bg-gradient-to-b" />
         <div className="flex flex-col items-center lg:items-start">
           <Badge variant="outline" className="mb-2">
-            <Code size={12} className="mr-2" />
+            <Code size={12} className="mr-1" />
             Full-Stack Development Agency
           </Badge>
           <h1 className="mb-1 text-center text-3xl font-extrabold text-balance filter md:text-4xl md:font-bold lg:text-left">
             We Turn Your Ideas Into{" "}
-            <span className="from-primary to-primary/60 bg-gradient-to-r bg-clip-text text-transparent">
+            <span className="from-primary to-primary/60 bg-gradient-to-r bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(255,93,1,0.4)]">
               Revenue-Generating
             </span>{" "}
             Machines
           </h1>
           <p className="text-muted-foreground mb-3 text-center text-lg lg:text-left">
-            We build high-performance web applications that drive business
-            growth. From MVP to enterprise scale, we deliver results that matter
-            to your bottom line.
+            We build high-performance web applications that drive business growth. From MVP to enterprise scale, we
+            deliver results that matter to your bottom line.
           </p>
           <div className="mb-5 space-y-3">
             <div className="flex items-center gap-3">
-              <CheckCircle className="h-5 w-5 text-green-500" />
-              <span className="text-sm font-medium">
-                Launch in 2-4 weeks, not months
-              </span>
+              <CheckCircle size={20} className="text-green-500" />
+              <span className="text-sm font-medium">Launch in 2-4 weeks, not months</span>
             </div>
             <div className="flex items-center gap-3">
-              <CheckCircle className="h-5 w-5 text-green-500" />
-              <span className="text-sm font-medium">
-                Built for scale with modern tech stack
-              </span>
+              <CheckCircle size={20} className="text-green-500" />
+              <span className="text-sm font-medium">Built for scale with modern tech stack</span>
             </div>
             <div className="flex items-center gap-3">
-              <CheckCircle className="h-5 w-5 text-green-500" />
-              <span className="text-sm font-medium">
-                Ongoing support & maintenance included
-              </span>
+              <CheckCircle size={20} className="text-green-500" />
+              <span className="text-sm font-medium">Ongoing support & maintenance included</span>
             </div>
           </div>
           <div className="flex gap-2">
@@ -55,13 +48,9 @@ export default function Hero() {
             <Button variant="outline">View Our Previous Works</Button>
           </div>
         </div>
-        <div className="flex items-center">
+        <div className="relative my-auto flex aspect-[1.7777777777777777/1] h-fit items-center overflow-hidden rounded-lg drop-shadow-[0_0_21px_rgba(255,255,255,0.2),0_0_10px_rgba(255,93,1,0.2)]">
           <Script src="https://fast.wistia.com/player.js" async />
-          <Script
-            src="https://fast.wistia.com/embed/q91qufujce.js"
-            async
-            type="module"
-          />
+          <Script src="https://fast.wistia.com/embed/q91qufujce.js" async type="module" />
           <style>
             {`
             wistia-player[media-id='q91qufujce']:not(:defined) {
@@ -73,6 +62,7 @@ export default function Hero() {
             `}
           </style>
           <wistia-player
+            className="absolute top-0 left-0"
             media-id="q91qufujce"
             aspect="1.7777777777777777"
           ></wistia-player>
@@ -86,27 +76,19 @@ export default function Hero() {
           <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
             <div className="text-center">
               <div className="text-primary text-3xl font-bold">200+</div>
-              <div className="text-muted-foreground text-sm">
-                Projects Delivered
-              </div>
+              <div className="text-muted-foreground text-sm">Projects Delivered</div>
             </div>
             <div className="text-center">
               <div className="text-primary text-3xl font-bold">98%</div>
-              <div className="text-muted-foreground text-sm">
-                Client Satisfaction
-              </div>
+              <div className="text-muted-foreground text-sm">Client Satisfaction</div>
             </div>
             <div className="text-center">
               <div className="text-primary text-3xl font-bold">2.5x</div>
-              <div className="text-muted-foreground text-sm">
-                Average ROI Increase
-              </div>
+              <div className="text-muted-foreground text-sm">Average ROI Increase</div>
             </div>
             <div className="text-center">
               <div className="text-primary text-3xl font-bold">24/7</div>
-              <div className="text-muted-foreground text-sm">
-                Support Available
-              </div>
+              <div className="text-muted-foreground text-sm">Support Available</div>
             </div>
           </div>
         </div>

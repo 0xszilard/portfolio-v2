@@ -5,6 +5,11 @@ const projectEntries = projects.map((project) => ({
   lastModified: new Date(),
   priority: 0.25,
 }));
+const blogEntries = projects.map((project) => ({
+  url: `${process.env.NEXT_PUBLIC_URL}/projects/${project.slug}`,
+  lastModified: new Date(),
+  priority: 0.25,
+}));
 
 export default function sitemap() {
   return [
@@ -15,16 +20,32 @@ export default function sitemap() {
       priority: 1,
     },
     {
-      url: `${process.env.NEXT_PUBLIC_URL}/about`,
+      url: `${process.env.NEXT_PUBLIC_URL}/booking`,
       lastModified: new Date(),
       priority: 0.8,
     },
     {
+      url: `${process.env.NEXT_PUBLIC_URL}/about`,
+      lastModified: new Date(),
+      priority: 0.75,
+    },
+    {
+      url: `${process.env.NEXT_PUBLIC_URL}/testimonials`,
+      lastModified: new Date(),
+      priority: 0.75,
+    },
+    {
       url: `${process.env.NEXT_PUBLIC_URL}/projects`,
       lastModified: new Date(),
-      priority: 0.8,
+      priority: 0.75,
     },
     ...projectEntries,
+    {
+      url: `${process.env.NEXT_PUBLIC_URL}/blog`,
+      lastModified: new Date(),
+      priority: 0.75,
+    },
+    ...blogEntries,
     {
       url: `${process.env.NEXT_PUBLIC_URL}/imprint`,
       lastModified: new Date(),

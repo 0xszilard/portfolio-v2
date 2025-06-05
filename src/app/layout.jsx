@@ -1,11 +1,12 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/ui/theme-provider";
-import "./globals.css";
+import "@/styles/globals.css";
 import Footer from "@/components/ui/footer";
 import { keywords } from "@/constants";
 import GoogleTag from "@/components/ui/GoogleTag";
 import CookieBanner from "@/components/ui/cookie-banner";
 import Navbar from "@/components/ui/navbar";
+import Loader from "@/components/ui/loader";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -92,6 +93,7 @@ export default function RootLayout({ children }) {
           <main className="mt-15">{children}</main>
           <Footer />
           <CookieBanner />
+          {/*  <Loader /> */}
         </ThemeProvider>
       </body>
     </html>

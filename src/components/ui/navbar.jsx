@@ -30,10 +30,10 @@ export default function Navbar() {
       initial={{ y: 0 }}
       animate={{ y: show ? 0 : -80 }}
       transition={{ duration: 0.25, ease: "easeOut" }}
-      className="fixed top-0 left-0 z-50 flex w-full items-center justify-between bg-white px-6 py-4 shadow"
+      className="bg-background fixed top-0 left-0 z-50 flex w-full items-center justify-between border-b px-6 py-4 shadow"
     >
-      <Link href="/" className="text-xl font-bold">
-        MySite
+      <Link href="/" className="cursor-pointer text-xl font-bold duration-150 hover:scale-102">
+        InfoBridge
       </Link>
       <div className="space-x-6 text-sm">
         <Link className="font-medium hover:underline" href="/about">
@@ -41,6 +41,12 @@ export default function Navbar() {
         </Link>
         <Link className="font-medium hover:underline" href="/projects">
           Projects
+        </Link>
+        <Link className="font-medium hover:underline" href="/testimonials">
+          Testimonials
+        </Link>
+        <Link className="font-medium hover:underline" href="/blog">
+          Blog
         </Link>
       </div>
     </motion.nav>

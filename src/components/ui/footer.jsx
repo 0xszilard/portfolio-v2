@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="flex items-center gap-4">
         <ThemeToggle />
         <span className="text-muted-foreground">
-          InfoBridge S.R.O. All Rights Reserved
+          InfoBridge Ltd. All Rights Reserved
         </span>
       </div>
       <div className="flex items-center gap-4">
