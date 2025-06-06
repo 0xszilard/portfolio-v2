@@ -1,7 +1,11 @@
-import { projects } from "@/constants";
 import ProjectCard from "./ProjectCard";
+import { client } from "../../../sanity/lib/client";
+import { LANDING_PROJECTS } from "../../../sanity/lib/queries";
 
-export default function Projects() {
+export default async function Projects() {
+  const projects = await client.fetch(LANDING_PROJECTS);
+
+  console.log(projects);
   return (
     <section className="px-4 py-20 md:px-10">
       <h2 className="mb-6 text-center text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Previous Works</h2>
@@ -12,11 +16,11 @@ export default function Projects() {
             key={idx}
             title={item.title}
             description={item.description}
-            image={item.image}
+            image={item.mainImage}
             outcomes={item.outcomes}
             technologies={item.technologies}
             liveUrl={item.liveUrl}
-            repoUrl={item.slug}
+            slug={item.slug}
           />
         ))}
       </div>

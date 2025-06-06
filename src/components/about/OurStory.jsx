@@ -37,7 +37,13 @@ export default function OurStory() {
           </div>
           <div className="relative">
             <div className="aspect-square overflow-hidden rounded-lg">
-              <Image src={placeholder} width={500} height={500} alt="Team working together" className="object-cover" />
+              <Image
+                src={placeholder}
+                width={500}
+                height={500}
+                alt="Team working together"
+                className="w-full object-cover"
+              />
             </div>
           </div>
         </div>

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { ArrowRight, Calendar, Clock, User, Search, TrendingUp } from "lucide-react";
@@ -164,7 +164,7 @@ export default function BlogPage() {
               <Search className="text-muted-foreground absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 transform" />
               <Input placeholder="Search articles..." className="pl-10" />
             </div>
-            <Button>Search</Button>
+            <Button className="h-9">Search</Button>
           </div>
         </div>
       </section>
@@ -266,7 +266,7 @@ export default function BlogPage() {
                 </div>
               </CardHeader>
 
-              <CardContent className="space-y-4">
+              <CardContent className="flex-grow space-y-4">
                 <div className="text-muted-foreground flex items-center gap-4 text-sm">
                   <Badge variant="outline">{post.category}</Badge>
                   <div className="flex items-center gap-1">
@@ -280,18 +280,17 @@ export default function BlogPage() {
                 </h3>
 
                 <p className="text-muted-foreground text-sm">{post.excerpt}</p>
-
-                <div className="flex items-center justify-between">
-                  <div className="text-muted-foreground flex items-center gap-2 text-sm">
-                    <User className="h-3 w-3" />
-                    {post.author}
-                  </div>
-                  <div className="text-muted-foreground flex items-center gap-1 text-sm">
-                    <Clock className="h-3 w-3" />
-                    {post.readTime}
-                  </div>
-                </div>
               </CardContent>
+              <CardFooter className="flex items-center justify-between">
+                <div className="text-muted-foreground flex items-center gap-2 text-sm">
+                  <User className="h-3 w-3" />
+                  {post.author}
+                </div>
+                <div className="text-muted-foreground flex items-center gap-1 text-sm">
+                  <Clock className="h-3 w-3" />
+                  {post.readTime}
+                </div>
+              </CardFooter>
             </Card>
           ))}
         </div>

@@ -2,30 +2,16 @@ import Image from "next/image";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowUpRight, InfoIcon, TrendingUp } from "lucide-react";
+import { urlFor } from "../../../sanity/lib/image";
 
-export default function ProjectCard({
-  title,
-  description,
-  image,
-  outcomes,
-  technologies,
-  liveUrl,
-  repoUrl,
-}) {
+export default function ProjectCard({ title, description, image, outcomes, technologies, liveUrl, slug }) {
   return (
     <Card className="overflow-hidden pt-0">
       <div className="aspect-[15/9] w-full overflow-hidden">
         <Image
-          src={image}
+          src={urlFor(image).url() || placeholder}
           alt={title}
           width={500}
           height={300}
@@ -60,16 +46,13 @@ export default function ProjectCard({
       </CardContent>
       <CardFooter className="flex justify-between gap-2">
         <Button variant="outline" size="sm" asChild>
-          <Link
-            href={`/projects/${repoUrl}`}
-            className="flex items-center gap-1"
-          >
+          <Link href={`/projects/${slug}`} className="flex items-center gap-1">
             <InfoIcon className="h-3.5 w-3.5" />
             <span>Read More</span>
           </Link>
         </Button>
         <Button size="sm" asChild>
-          <Link href={liveUrl} className="flex items-center gap-1">
+          <Link href={liveUrl || ""} className="flex items-center gap-1">
             <span>Live Demo</span>
             <ArrowUpRight className="h-3.5 w-3.5" />
           </Link>

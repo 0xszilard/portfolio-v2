@@ -1,10 +1,12 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, ExternalLink, TrendingUp, Users, Clock, Star } from "lucide-react";
+import { Star } from "lucide-react";
 import { placeholder } from "@/assets";
-import { projects } from "@/constants";
+import ProjectCard from "@/components/home/ProjectCard";
+import { LANDING_PROJECTS } from "../../../sanity/lib/queries";
+import { client } from "../../../sanity/lib/client";
 
 export const metadata = {
   title: "Projects",
@@ -57,12 +59,14 @@ export const metadata = {
   },
 };
 
-export default function ProjectsPage() {
+export default async function ProjectsPage() {
+  const projects = await client.fetch(LANDING_PROJECTS);
+
   return (
     <>
       {/* Hero Section */}
-      <section className="container m-auto px-4 py-16 md:px-6 md:py-24">
-        <div className="mx-auto max-w-3xl space-y-6 text-center">
+      <section className="px-4 py-16 md:px-6 md:py-24">
+        <div className="container mx-auto max-w-3xl space-y-6 text-center">
           <Badge variant="secondary" className="mx-auto w-fit">
             <Star className="mr-2 h-3 w-3" />
             200+ Successful Projects
@@ -145,7 +149,13 @@ export default function ProjectsPage() {
             </div>
             <div className="relative">
               <div className="aspect-video overflow-hidden rounded-lg border shadow-lg">
-                <Image src={placeholder} width={600} height={400} alt="TechFlow Dashboard" className="object-cover" />
+                <Image
+                  src={placeholder}
+                  width={600}
+                  height={400}
+                  alt="TechFlow Dashboard"
+                  className="w-full object-cover"
+                />
               </div>
             </div>
           </div>
@@ -155,54 +165,17 @@ export default function ProjectsPage() {
       {/* Projects Grid */}
       <section className="container m-auto px-4 py-16 md:px-6 md:py-20">
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {projects.map((p, idx) => (
-            <Card key={idx} className="group pt-0 transition-shadow hover:shadow-lg">
-              <CardHeader className="p-0">
-                <div className="aspect-video overflow-hidden rounded-t-lg">
-                  <Image
-                    src={p.image || placeholder}
-                    width={350}
-                    height={200}
-                    alt={p.title}
-                    className="w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                </div>
-              </CardHeader>
-              <CardContent className="flex-grow space-y-4">
-                <div className="flex items-center justify-between">
-                  <Badge variant="secondary">EdTech</Badge>
-                  <div className="text-muted-foreground flex items-center gap-1 text-sm">
-                    <Clock className="h-3 w-3" />
-                    10 weeks
-                  </div>
-                </div>
-                <h3 className="text-xl font-semibold">{p.title}</h3>
-                <p className="text-muted-foreground text-sm">{p.description}</p>
-                <div className="grid grid-cols-2 gap-4 text-sm">
-                  <div className="flex items-center gap-2">
-                    <TrendingUp className="h-4 w-4 text-green-500" />
-                    <span>95% Completion Rate</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Users className="h-4 w-4 text-blue-500" />
-                    <span>25k+ Students</span>
-                  </div>
-                </div>
-                <div className="flex flex-wrap gap-1">
-                  {p.technologies.map((i) => (
-                    <Badge key={i} variant="outline" className="text-xs">
-                      {i}
-                    </Badge>
-                  ))}
-                </div>
-              </CardContent>
-              <CardFooter>
-                <Button variant="outline" className="w-full">
-                  View Case Study
-                  <ArrowRight size={16} />
-                </Button>
-              </CardFooter>
-            </Card>
+          {projects.map((item, idx) => (
+            <ProjectCard
+              key={idx}
+              title={item.title}
+              description={item.description}
+              image={item.mainImage}
+              outcomes={item.outcomes}
+              technologies={item.technologies}
+              liveUrl={item.liveUrl}
+              sug={item.slug}
+            />
           ))}
         </div>
       </section>

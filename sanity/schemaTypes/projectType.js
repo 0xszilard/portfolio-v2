@@ -41,14 +41,9 @@ export const projectType = defineType({
       name: "metaTitle",
       type: "string",
     }),
-
     defineField({
       name: "metaDescription",
       type: "string",
-    }),
-    defineField({
-      name: "description",
-      type: "text",
     }),
     defineField({
       name: "body",
@@ -75,8 +70,7 @@ export const projectType = defineType({
       title: "Live URL",
       type: "url",
       description: "URL where the project is deployed or demonstrated",
-      validation: (Rule) =>
-        Rule.uri({ scheme: ["http", "https"] }).error("Must be a valid URL"),
+      validation: (Rule) => Rule.uri({ scheme: ["http", "https"] }).error("Must be a valid URL"),
     }),
   ],
   preview: {
