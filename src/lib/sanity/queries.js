@@ -8,6 +8,16 @@ export const LANDING_PROJECTS = `
       technologies,
       liveUrl
 } [0..5]`;
+export const PROJECTS = `
+* [_type == 'project'] {
+      "slug": slug.current,
+}`;
+export const POSTS = `
+* [_type == 'post'] {
+      "slug": slug.current,
+      "category": categories[0]->slug.current
+}`;
+
 export const PROJECT_QUERY = `
 * [_type == 'project' && slug.current == $slug] {
       title,

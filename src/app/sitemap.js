@@ -1,17 +1,28 @@
 import { projects } from "@/constants";
+import { client } from "@/lib/sanity/client";
+import { CATEGORIES_QUERY, POSTS, PROJECTS } from "@/lib/sanity/queries";
 
-const projectEntries = projects.map((project) => ({
-  url: `${process.env.NEXT_PUBLIC_URL}/projects/${project.slug}`,
-  lastModified: new Date(),
-  priority: 0.25,
-}));
-const blogEntries = projects.map((project) => ({
-  url: `${process.env.NEXT_PUBLIC_URL}/projects/${project.slug}`,
-  lastModified: new Date(),
-  priority: 0.25,
-}));
+export default async function sitemap() {
+  const blogPosts = await client.fetch(POSTS);
+  const categories = await client.fetch(CATEGORIES_QUERY);
+  const projects = await client.fetch(PROJECTS);
 
-export default function sitemap() {
+  const projectEntries = projects.map((project) => ({
+    url: `${process.env.NEXT_PUBLIC_URL}/projects/${project.slug}`,
+    lastModified: new Date(),
+    priority: 0.25,
+  }));
+  const categoryEntries = categories.map((category) => ({
+    url: `${process.env.NEXT_PUBLIC_URL}/blog/${category.slug}`,
+    lastModified: new Date(),
+    priority: 0.25,
+  }));
+  const blogEntries = blogPosts.map((post) => ({
+    url: `${process.env.NEXT_PUBLIC_URL}/blog/${category.slug}`,
+    lastModified: new Date(),
+    priority: 0.25,
+  }));
+
   return [
     {
       url: process.env.NEXT_PUBLIC_URL,
@@ -30,11 +41,6 @@ export default function sitemap() {
       priority: 0.75,
     },
     {
-      url: `${process.env.NEXT_PUBLIC_URL}/testimonials`,
-      lastModified: new Date(),
-      priority: 0.75,
-    },
-    {
       url: `${process.env.NEXT_PUBLIC_URL}/projects`,
       lastModified: new Date(),
       priority: 0.75,
@@ -45,6 +51,7 @@ export default function sitemap() {
       lastModified: new Date(),
       priority: 0.75,
     },
+    ...categoryEntries,
     ...blogEntries,
     {
       url: `${process.env.NEXT_PUBLIC_URL}/imprint`,
