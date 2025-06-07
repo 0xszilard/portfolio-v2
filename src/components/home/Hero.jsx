@@ -12,19 +12,19 @@ export default function Hero() {
         <div className="flex flex-col items-center lg:items-start">
           <Badge variant="outline" className="mb-2">
             <Code size={12} className="mr-1" />
-            Full-Stack Development Agency
+            Product-Building Team for Creators & Experts
           </Badge>
           <h1 className="mb-1 text-center text-3xl font-extrabold text-balance filter md:text-4xl md:font-bold lg:text-left">
-            We Turn Your Ideas Into{" "}
+            We Turn Your Audience Into{" "}
             <span className="from-primary to-primary/60 bg-gradient-to-r bg-clip-text text-transparent dark:drop-shadow-[0_0_10px_rgba(255,93,1,0.4)]">
-              Revenue-Generating
-            </span>{" "}
-            Machines
+              Scalable Products
+            </span>
           </h1>
           <p className="text-muted-foreground mb-3 text-center text-lg lg:text-left">
-            We build high-performance web applications that drive business growth. From MVP to enterprise scale, we
-            deliver results that matter to your bottom line.
+            We help creators, coaches, and niche entrepreneurs turn their ideas, expertise, and audience into real,
+            revenue-generating platforms — built fast, and built to last.
           </p>
+
           <div className="mb-5 space-y-3">
             <div className="flex items-center gap-3">
               <CheckCircle size={20} className="text-green-500" />

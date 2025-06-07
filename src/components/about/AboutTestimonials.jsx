@@ -10,12 +10,12 @@ export default function AboutTestimonials() {
           <div className="mx-auto max-w-3xl space-y-6 text-center">
             <Quote className="mx-auto h-12 w-12 opacity-50" />
             <blockquote className="text-xl font-medium md:text-2xl">
-              "They delivered our MVP in 3 weeks and helped us raise $2M in Series A. The quality of their work and
-              speed of delivery was incredible. They truly understand what startups need."
+              "We turned our idea into a real SaaS product in just 3 weeks — and it’s already generating revenue. The
+              team made everything feel clear and under control. They get what creators need — and they deliver fast."
             </blockquote>
             <div className="space-y-2">
               <div className="font-semibold">Jennifer W.</div>
-              <div className="text-sm opacity-90">CEO (YC S22)</div>
+              <div className="text-sm opacity-90">~ 2.4M followers on Instagram</div>
             </div>
           </div>
         </CardContent>

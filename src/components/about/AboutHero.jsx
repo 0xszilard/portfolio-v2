@@ -8,17 +8,17 @@ export default function AboutHero() {
       <div className="container mx-auto max-w-3xl space-y-6 text-center">
         <Badge variant="secondary" className="mx-auto w-fit">
           <Award className="mr-2 h-3 w-3" />
-          Est. 2019 • 200+ Projects Delivered
+          Est. 2019 • 200+ Platforms Launched
         </Badge>
         <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-          We Turn Complex Ideas Into{" "}
+          We Turn Expert Knowledge Into{" "}
           <span className="from-primary to-primary/60 bg-gradient-to-r bg-clip-text text-transparent">
-            Simple Solutions
+            Scalable Products
           </span>
         </h1>
         <p className="text-muted-foreground mx-auto max-w-2xl text-lg md:text-xl">
-          Founded by experienced developers who understand the challenges of scaling digital products. We've helped over
-          150 companies transform their ideas into profitable web applications.
+          Founded by builders who understand what creators and coaches actually need. Since 2019, we’ve helped over 200
+          entrepreneurs turn their audience and expertise into real digital platforms that generate revenue — fast.
         </p>
       </div>
     </section>

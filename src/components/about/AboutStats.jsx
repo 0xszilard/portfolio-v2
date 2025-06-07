@@ -13,7 +13,7 @@ export default function AboutStats() {
             <div className="text-muted-foreground text-sm">Projects Delivered</div>
           </div>
           <div className="space-y-2 text-center">
-            <div className="text-primary text-4xl font-bold">$50M+</div>
+            <div className="text-primary text-4xl font-bold">$2M+</div>
             <div className="text-muted-foreground text-sm">Client Funding Raised</div>
           </div>
           <div className="space-y-2 text-center">

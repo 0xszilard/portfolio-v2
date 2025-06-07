@@ -11,37 +11,39 @@ export default function Booking() {
         <div>
           <Badge className="mb-2">BOOK YOUR FREE STRATEGY CALL</Badge>
           <h2 className="mb-4 text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-            Free 15-Minute SaaS Product Strategy Call
+            Free 15-Minute Product Strategy Call
           </h2>
           <p className="text-muted-foreground mb-2 text-lg">
-            In just 15 minutes, you'll walk away with a clear plan to turn your app or SaaS idea into a real, working
-            product — even if you're not technical.
+            On this call, we’ll explore how you can turn your content, expertise, or coaching business into a real SaaS
+            product or platform — without needing to code or hire a dev team yourself.
           </p>
           <p className="text-muted-foreground mb-4 text-lg">
-            Pick a time on our calendar and let’s talk about your idea, your market, and how we can bring your platform
-            to life fast, lean, and smart.
+            Choose a time that works for you, and we’ll map out what your idea could look like as a real,
+            revenue-generating product.
           </p>
           <h3 className="text-primary mb-3 text-xl font-semibold">THIS CALL IS PERFECT FOR:</h3>
           <ol className="text-muted-foreground list-outside list-disc space-y-2 pl-5 text-lg">
             <li>
-              Creators or founders with an idea for a{" "}
-              <span className="text-foreground font-bold">SaaS, platform, or web app</span> but no dev team.
+              Creators and coaches with a{" "}
+              <span className="text-foreground font-bold">loyal audience or client base</span> who want to productize
+              their expertise.
             </li>
             <li>
-              Entrepreneurs looking to <span className="text-foreground font-bold">validate, scope, and launch</span> a
-              product the smart way — without learning to code.
+              Entrepreneurs who are ready to{" "}
+              <span className="text-foreground font-bold">build a platform or SaaS tool</span> around a proven niche or
+              pain point.
             </li>
             <li>
-              Founders who want a partner that can{" "}
-              <span className="text-foreground font-bold">handle tech from A to Z</span> — from wireframes to launch.
+              Founders looking for a partner to{" "}
+              <span className="text-foreground font-bold">handle the full product build</span> — from idea to launch.
             </li>
             <li>
-              People who are tired of generic dev shops and want a team that{" "}
-              <span className="text-foreground font-bold">understands product, not just code.</span>
+              Experts who are tired of trading time for money and want to{" "}
+              <span className="text-foreground font-bold">build something that scales.</span>
             </li>
             <li>
-              Anyone who wants to build software that{" "}
-              <span className="text-foreground font-bold">gets used, makes money, and scales.</span>
+              Anyone who has <span className="text-foreground font-bold">proof of demand</span> and wants to turn it
+              into a real, user-ready product.
             </li>
           </ol>
         </div>

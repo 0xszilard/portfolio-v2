@@ -8,20 +8,22 @@ export default function About() {
         <div>
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">About Us</h2>
           <p className="text-muted-foreground mt-4 md:text-lg">
-            We’re a full-stack development agency with over 7 years of experience delivering web and mobile solutions
-            that generate tangible business impact. Our process begins with understanding your strategic goals—then
-            translating them into performant, scalable technology.
+            We help creators, coaches, and niche experts turn their audience and expertise into real, scalable products.
+            Whether it's a SaaS platform, membership portal, or automation tool — we bring your vision to life with
+            clarity, speed, and zero tech overwhelm.
           </p>
           <p className="text-muted-foreground mt-4 md:text-lg">
-            From early-stage startups to enterprise clients, our team has successfully launched products that have
-            generated more than $4.2M in client revenue—while saving time and costs through intelligent automation and
-            optimization.
+            With over 7 years of product-building experience, we’ve helped launch platforms that have generated over
+            $4.2M in revenue — without bloated teams or endless timelines. Our process is lean, collaborative, and
+            focused on getting you to market fast.
           </p>
           <p className="text-muted-foreground mt-4 md:text-lg">
-            Beyond development, we’re passionate about mentoring, contributing to the tech community, and staying at the
-            forefront of innovation.
+            We’re not just developers — we’re product partners. That means thinking through positioning, user
+            experience, monetization, and launch — not just code. If you’re serious about building something that gets
+            used, we’re the team to help you make it real.
           </p>
         </div>
+
         <div className="space-y-6">
           <h3 className="text-xl font-bold">Technical Expertise</h3>
           <div className="flex flex-wrap gap-2">

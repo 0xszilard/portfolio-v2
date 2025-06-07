@@ -2,7 +2,7 @@ import React from "react";
 import { Badge } from "../ui/badge";
 import { Button } from "../ui/button";
 import Image from "next/image";
-import { placeholder } from "@/assets";
+import { scaleinsta } from "@/assets";
 import Link from "next/link";
 
 export default function FeaturedProject() {
@@ -12,16 +12,19 @@ export default function FeaturedProject() {
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <div className="space-y-6">
             <Badge variant="secondary">Featured Case Study</Badge>
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">TechFlow: From Idea to $2M Series A</h2>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
+              From Audience to $2M Platform in 3 Weeks
+            </h2>
             <div className="space-y-4">
               <p className="text-muted-foreground">
-                A Y Combinator startup needed to build their MVP in 3 weeks to meet investor deadlines. We delivered a
-                full-featured SaaS platform that helped them secure $2M in Series A funding.
+                Brian, the founder had the niche, the audience, and the market insight — but no product. In just 3
+                weeks, we built and launched their SaaS platform, helping them land $2M in Series A funding and 10k+
+                active users.
               </p>
               <div className="grid grid-cols-3 gap-4">
                 <div className="text-center">
                   <div className="text-primary text-2xl font-bold">3 weeks</div>
-                  <div className="text-muted-foreground text-sm">Development Time</div>
+                  <div className="text-muted-foreground text-sm">Build Time</div>
                 </div>
                 <div className="text-center">
                   <div className="text-primary text-2xl font-bold">$2M</div>
@@ -29,7 +32,7 @@ export default function FeaturedProject() {
                 </div>
                 <div className="text-center">
                   <div className="text-primary text-2xl font-bold">10k+</div>
-                  <div className="text-muted-foreground text-sm">Active Users</div>
+                  <div className="text-muted-foreground text-sm">Users at Launch</div>
                 </div>
               </div>
             </div>
@@ -50,10 +53,10 @@ export default function FeaturedProject() {
           <div className="relative">
             <div className="aspect-video overflow-hidden rounded-lg border shadow-lg">
               <Image
-                src={placeholder}
+                src={scaleinsta}
                 width={600}
                 height={400}
-                alt="Featured Case Study"
+                alt="SaaS platform case study preview"
                 className="w-full object-cover"
               />
             </div>

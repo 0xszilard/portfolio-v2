@@ -19,7 +19,7 @@ export default function RecentPosts({ posts }) {
             <CardHeader className="p-0">
               <div className="aspect-video overflow-hidden rounded-t-lg">
                 <Image
-                  src={placeholder || urlFor(post.mainImage).url()}
+                  src={urlFor(post.mainImage).url()}
                   width={350}
                   height={200}
                   alt={post.mainImage.alt}

@@ -1,4 +1,4 @@
-import { placeholder } from "@/assets";
+import { placeholder, scaleinsta } from "@/assets";
 import React from "react";
 import { Card, CardContent } from "../ui/card";
 import { Badge } from "../ui/badge";
@@ -18,11 +18,11 @@ export default function FeaturedPost({ post }) {
         <div className="grid gap-0 md:grid-cols-2">
           <div className="aspect-video md:aspect-auto">
             <Image
-              src={placeholder}
+              src={scaleinsta}
               width={600}
               height={400}
               alt="Featured article"
-              className="h-full w-full object-cover"
+              className="aspect-square h-full w-full object-cover"
             />
           </div>
           <CardContent className="flex flex-col justify-center p-8">

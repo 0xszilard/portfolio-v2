@@ -13,19 +13,21 @@ export default function OurStory() {
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Our Story</h2>
             <div className="text-muted-foreground space-y-4">
               <p>
-                Started in 2019 by three senior developers who were frustrated with agencies that over-promised and
-                under-delivered. We saw too many businesses struggle with slow, expensive development cycles that didn't
-                deliver real business value.
+                We started our agency after years of watching talented creators and experts get stuck — either
+                overwhelmed by tech, burned by flaky freelancers, or frustrated by bloated agencies that didn’t get
+                their vision.
               </p>
               <p>
-                Our mission became simple: build high-quality web applications faster and more cost-effectively than
-                traditional agencies, while maintaining the highest standards of code quality and user experience.
+                Our mission is simple: help content-driven businesses build smart, scalable digital products — without
+                wasting time, money, or momentum. We prioritize clarity, speed, and outcomes over buzzwords and bloat.
               </p>
               <p>
-                Today, we're a team of 15 specialists who have delivered over 200 projects, helping startups raise $50M+
-                in funding and enterprises increase their digital revenue by an average of 2.5x.
+                Since launching, we’ve grown into a team of 15+ product strategists, designers, and developers — helping
+                creators launch over 200 platforms and SaaS tools, raise over $2M, and unlock new revenue streams at
+                scale.
               </p>
             </div>
+
             <div className="flex flex-col gap-3 sm:flex-row">
               <Button asChild>
                 <Link href="/booking">Start Your Project</Link>

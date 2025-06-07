@@ -12,7 +12,7 @@ export default function AboutCTA() {
         </p>
         <div className="flex flex-col justify-center gap-3 sm:flex-row">
           <Button asChild>
-            <Link href="/booking">Get Free Project Quote</Link>
+            <Link href="/booking">Schedule A Free Startegy Call</Link>
           </Button>
           <Button variant="outline" asChild>
             <Link href="/projects">View Case Studies</Link>
