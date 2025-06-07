@@ -84,7 +84,6 @@ export default function RootLayout({ children }) {
           <main className="mt-15">{children}</main>
           <Footer />
           <CookieBanner />
-          {/*  <Loader /> */}
         </ThemeProvider>
       </body>
     </html>

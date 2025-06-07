@@ -1,11 +1,10 @@
+import { client } from "@/lib/sanity/client";
 import ProjectCard from "./ProjectCard";
-import { client } from "../../../sanity/lib/client";
-import { LANDING_PROJECTS } from "../../../sanity/lib/queries";
+import { LANDING_PROJECTS } from "@/lib/sanity/queries";
 
 export default async function Projects() {
   const projects = await client.fetch(LANDING_PROJECTS);
 
-  console.log(projects);
   return (
     <section className="px-4 py-20 md:px-10">
       <h2 className="mb-6 text-center text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Previous Works</h2>
@@ -25,7 +24,7 @@ export default async function Projects() {
         ))}
       </div>
       <a
-        href="/#contact"
+        href="/booking"
         className="mx-auto mt-6 flex w-fit transform cursor-pointer flex-col rounded-lg border-2 border-gray-600 bg-gradient-to-t from-gray-800 to-gray-600 px-4 py-2 text-center font-semibold text-white shadow-md transition-all duration-150 ease-in-out hover:opacity-90 active:scale-95 dark:border-gray-100 dark:from-gray-300 dark:to-gray-100 dark:text-black"
       >
         Get In Touch

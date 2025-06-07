@@ -70,7 +70,7 @@ export default function AboutPage() {
       <AboutHero />
       <OurStory />
       <ValuesSection />
-      <TeamSection />
+      {/*  <TeamSection /> */}
       <AboutTestimonials />
       <AboutStats />
       <AboutCTA />

@@ -19,6 +19,18 @@ export const postType = defineType({
       },
     }),
     defineField({
+      name: "description",
+      type: "string",
+    }),
+    defineField({
+      name: "readTime",
+      type: "string",
+    }),
+    defineField({
+      name: "author",
+      type: "string",
+    }),
+    defineField({
       name: "metaTitle",
       type: "string",
     }),

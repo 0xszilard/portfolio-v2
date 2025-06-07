@@ -3,12 +3,7 @@ import FlipLink from "../ui/text-effect-flipper";
 
 const Icons = {
   linkedin: () => (
-    <svg
-      width="86"
-      height="86"
-      viewBox="0 0 86 86"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="86" height="86" viewBox="0 0 86 86" xmlns="http://www.w3.org/2000/svg">
       <rect
         width="86"
         height="86"
@@ -26,12 +21,7 @@ const Icons = {
     </svg>
   ),
   github: () => (
-    <svg
-      width="86"
-      height="86"
-      viewBox="0 0 86 86"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="86" height="86" viewBox="0 0 86 86" xmlns="http://www.w3.org/2000/svg">
       <rect
         width="86"
         height="86"
@@ -55,9 +45,7 @@ export default function Contact() {
         <section className="grid place-content-center gap-2 px-8 text-black">
           <div className="group flex items-center justify-center">
             <Icons.linkedin />
-            <FlipLink href="https://linkedin.com/in/szilardmate">
-              Linkedin
-            </FlipLink>
+            <FlipLink href="https://www.linkedin.com/company/infobridge-dev">Linkedin</FlipLink>
           </div>
           <div className="group flex items-center justify-center">
             <FlipLink href="https://github.com/0xszilard">Github</FlipLink>

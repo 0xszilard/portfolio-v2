@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowUpRight, InfoIcon, TrendingUp } from "lucide-react";
-import { urlFor } from "../../../sanity/lib/image";
+import { urlFor } from "@/lib/sanity/image";
 
 export default function ProjectCard({ title, description, image, outcomes, technologies, liveUrl, slug }) {
   return (
@@ -51,12 +51,14 @@ export default function ProjectCard({ title, description, image, outcomes, techn
             <span>Read More</span>
           </Link>
         </Button>
-        <Button size="sm" asChild>
-          <Link href={liveUrl || ""} className="flex items-center gap-1">
-            <span>Live Demo</span>
-            <ArrowUpRight className="h-3.5 w-3.5" />
-          </Link>
-        </Button>
+        {liveUrl && (
+          <Button size="sm" asChild>
+            <Link href={liveUrl} className="flex items-center gap-1">
+              <span>Live Demo</span>
+              <ArrowUpRight className="h-3.5 w-3.5" />
+            </Link>
+          </Button>
+        )}
       </CardFooter>
     </Card>
   );

@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { Button } from "./button";
 
 export default function Navbar() {
   const [show, setShow] = useState(true);
@@ -35,7 +36,7 @@ export default function Navbar() {
       <Link href="/" className="cursor-pointer text-xl font-bold duration-150 hover:scale-102">
         InfoBridge
       </Link>
-      <div className="space-x-6 text-sm">
+      <div className="flex items-center gap-6 text-sm">
         <Link className="font-medium hover:underline" href="/about">
           About
         </Link>
@@ -46,6 +47,9 @@ export default function Navbar() {
         <Link className="font-medium hover:underline" href="/blog">
           Blog
         </Link>
+        <Button size="sm" className="h-8 text-sm font-medium" asChild>
+          <Link href="/booking">Work with Us</Link>
+        </Button>
       </div>
     </motion.nav>
   );

@@ -1,38 +1,32 @@
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import JsonLd from "../ui/json-ld";
 
 export default async function Faq() {
   const faqs = [
     {
-      question: "I’m just exploring ideas — is it too early to talk?",
+      question: "I’m still validating my idea — is this for me?",
       answer:
-        "Not too early at all — but we work best with people who are actively moving forward. If you're serious about launching in the near future, we’ll help you map the right path and avoid common mistakes.",
+        "If you're actively researching your market or audience, that’s a great start. But we only take on projects where there’s clear momentum — whether that’s a budget, early user base, or clear validation. If you’re serious about building, we’re here to help you do it right.",
     },
     {
-      question: "Do you only work with people who have a budget?",
+      question: "Do I need a budget to work with you?",
       answer:
-        "Yes — we’re a consulting and development team, not a free coaching service. If you have a rough idea of your budget (even a small one), we can help scope a solution that fits.",
+        "Yes. We specialize in building real products — not providing free advice. Whether you're bootstrapped or VC-backed, we expect clients to have a budget set aside so we can build efficiently and seriously.",
     },
     {
-      question:
-        "I’ve never built an app or website before — can I still work with you?",
+      question: "I don’t have a dev background — can we still work together?",
       answer:
-        "Absolutely — many of our clients are non-technical. We’ll walk you through the process, explain things clearly, and help you make smart decisions from day one.",
+        "Definitely. Most of our clients are non-technical. We guide you through the build in plain language, help you make smart decisions, and keep things transparent from start to finish.",
     },
     {
-      question: "How long does a typical project take?",
+      question: "How long will it take to build my product?",
       answer:
-        "Smaller MVPs can take 4–6 weeks, while larger platforms may take 2–3 months or more. If you have a timeline in mind, we’ll let you know what’s realistic and how to reach it.",
+        "That depends on scope. MVPs usually take 3–6 weeks. Full-feature platforms take longer. We’ll break it down for you clearly — and never promise shortcuts that compromise quality.",
     },
     {
-      question: "What kind of clients do you do your best work with?",
+      question: "What kind of clients do you work best with?",
       answer:
-        "We love working with coaches, creators, and startups who are proactive, open to collaboration, and ready to invest in their growth. If you value quality and want a true partner — you’ll love working with us.",
+        "We do our best work with founders who come prepared — whether that’s with market research, a small audience, or early traction. If you’re committed to launching and ready to move fast, we’ll be the partner that gets you there.",
     },
   ];
 
@@ -61,18 +55,14 @@ export default async function Faq() {
           <Accordion collapsible type="single">
             {faqs.map((q) => (
               <AccordionItem value={q.question} key={q.question}>
-                <AccordionTrigger className="text-xl">
-                  {q.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground text-lg">
-                  {q.answer}
-                </AccordionContent>
+                <AccordionTrigger className="text-xl">{q.question}</AccordionTrigger>
+                <AccordionContent className="text-muted-foreground text-lg">{q.answer}</AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
         </div>
         <a
-          href="/#contact"
+          href="/booking"
           className="mx-auto flex w-fit transform cursor-pointer flex-col rounded-lg border-2 border-gray-600 bg-gradient-to-t from-gray-800 to-gray-600 px-4 py-2 text-center font-semibold text-white shadow-md transition-all duration-150 ease-in-out hover:opacity-90 active:scale-95 dark:border-gray-100 dark:from-gray-300 dark:to-gray-100 dark:text-black"
         >
           Get In Touch

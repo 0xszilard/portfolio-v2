@@ -1,13 +1,7 @@
-import { cache } from "react";
-import { client } from "../../../../sanity/lib/client";
-import { PROJECT_QUERY } from "../../../../sanity/lib/queries";
-import { urlFor } from "../../../../sanity/lib/image";
 import BlogContent from "@/components/blog/BlogContent";
+import { urlFor } from "@/lib/sanity/image";
+import { getProject } from "@/lib/sanity/server";
 import Image from "next/image";
-
-const getProject = cache(async (slug) => {
-  return await client.fetch(PROJECT_QUERY, { slug: slug });
-});
 
 export async function generateMetadata({ params }) {
   const { project } = await params;

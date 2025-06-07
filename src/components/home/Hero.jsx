@@ -2,6 +2,7 @@ import { CheckCircle, Code } from "lucide-react";
 import { Badge } from "../ui/badge";
 import { Button } from "../ui/button";
 import Script from "next/script";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -15,7 +16,7 @@ export default function Hero() {
           </Badge>
           <h1 className="mb-1 text-center text-3xl font-extrabold text-balance filter md:text-4xl md:font-bold lg:text-left">
             We Turn Your Ideas Into{" "}
-            <span className="from-primary to-primary/60 bg-gradient-to-r bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(255,93,1,0.4)]">
+            <span className="from-primary to-primary/60 bg-gradient-to-r bg-clip-text text-transparent dark:drop-shadow-[0_0_10px_rgba(255,93,1,0.4)]">
               Revenue-Generating
             </span>{" "}
             Machines
@@ -39,13 +40,12 @@ export default function Hero() {
             </div>
           </div>
           <div className="flex gap-2">
-            <Button
-              variant="unstyled"
-              className="mx-auto flex h-[unset] transform cursor-pointer border border-gray-600 bg-gradient-to-t from-gray-800 to-gray-600 px-4 py-2 text-center font-semibold text-white shadow-md transition-all duration-150 ease-in-out hover:scale-102 active:scale-95 dark:border-gray-100 dark:from-gray-300 dark:to-gray-100 dark:text-black"
-            >
-              Book a Free Discovery Call
+            <Button asChild>
+              <Link href="/booking">Book a Free Discovery Call</Link>
             </Button>
-            <Button variant="outline">View Our Previous Works</Button>
+            <Button variant="outline">
+              <Link href="/projects">View Our Previous Works</Link>
+            </Button>
           </div>
         </div>
         <div className="relative my-auto flex aspect-[1.7777777777777777/1] h-fit items-center overflow-hidden rounded-lg drop-shadow-[0_0_21px_rgba(255,255,255,0.2),0_0_10px_rgba(255,93,1,0.2)]">

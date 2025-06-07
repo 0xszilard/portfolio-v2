@@ -14,8 +14,8 @@ export default function AboutTestimonials() {
               speed of delivery was incredible. They truly understand what startups need."
             </blockquote>
             <div className="space-y-2">
-              <div className="font-semibold">Jennifer Walsh</div>
-              <div className="text-sm opacity-90">CEO, TechFlow (YC S22)</div>
+              <div className="font-semibold">Jennifer W.</div>
+              <div className="text-sm opacity-90">CEO (YC S22)</div>
             </div>
           </div>
         </CardContent>

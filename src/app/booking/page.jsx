@@ -1,8 +1,9 @@
 import BookingHero from "@/components/booking/BookingHero";
-import BookingForm from "@/components/booking/BookingForm";
+/* import BookingForm from "@/components/booking/BookingForm" */
 import WhatToExpect from "@/components/booking/WhatToExpect";
 import SocialProof from "@/components/booking/SocialProof";
 import BookingFaq from "@/components/booking/BookingFaq";
+import Booking from "@/components/home/Booking";
 
 export const metadata = {
   title: "Book a Free Discovery Call - Software Solutions for Online Creators",
@@ -59,7 +60,8 @@ export default function BookingPage() {
   return (
     <>
       <BookingHero />
-      <BookingForm />
+      <Booking />
+      {/*  <BookingForm /> */}
       <WhatToExpect />
       <BookingFaq />
       <SocialProof />

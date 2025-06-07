@@ -38,11 +38,14 @@ export default function OurStory() {
           <div className="relative">
             <div className="aspect-square overflow-hidden rounded-lg">
               <Image
-                src={placeholder}
-                width={500}
-                height={500}
+                src={
+                  "https://images.unsplash.com/photo-1559136555-9303baea8ebd?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" ||
+                  placeholder
+                }
+                width={900}
+                height={900}
                 alt="Team working together"
-                className="w-full object-cover"
+                className="aspect-square w-full object-cover"
               />
             </div>
           </div>

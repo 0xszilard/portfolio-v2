@@ -30,7 +30,7 @@ export default function BookingForm() {
               <CardContent className="space-y-4">
                 <div className="text-muted-foreground flex items-center gap-2 text-sm">
                   <Clock className="h-4 w-4" />
-                  45 minutes
+                  15 minutes
                 </div>
                 <p className="text-sm">
                   Perfect for new projects. We'll discuss your goals, provide technical recommendations, and outline a

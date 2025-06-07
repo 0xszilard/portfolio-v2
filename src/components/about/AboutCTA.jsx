@@ -11,7 +11,9 @@ export default function AboutCTA() {
           Let's discuss your project and see how we can help you achieve your business goals.
         </p>
         <div className="flex flex-col justify-center gap-3 sm:flex-row">
-          <Button>Get Free Project Quote</Button>
+          <Button asChild>
+            <Link href="/booking">Get Free Project Quote</Link>
+          </Button>
           <Button variant="outline" asChild>
             <Link href="/projects">View Case Studies</Link>
           </Button>
