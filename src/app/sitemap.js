@@ -18,7 +18,7 @@ export default async function sitemap() {
     priority: 0.25,
   }));
   const blogEntries = blogPosts.map((post) => ({
-    url: `${process.env.NEXT_PUBLIC_URL}/blog/${category.slug}`,
+    url: `${process.env.NEXT_PUBLIC_URL}/blog/${post.category}/${post.slug}`,
     lastModified: new Date(),
     priority: 0.25,
   }));
