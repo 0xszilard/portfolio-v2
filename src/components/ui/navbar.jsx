@@ -4,9 +4,12 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Button } from "./button";
+import { Sheet, SheetClose, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "./sheet";
+import { MenuIcon, X } from "lucide-react";
 
 export default function Navbar() {
   const [show, setShow] = useState(true);
+  const [open, setOpen] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
@@ -36,14 +39,13 @@ export default function Navbar() {
       <Link href="/" className="cursor-pointer text-xl font-bold duration-150 hover:scale-102">
         InfoBridge
       </Link>
-      <div className="flex items-center gap-6 text-sm">
+      <div className="hidden items-center gap-6 text-sm md:flex">
         <Link className="font-medium hover:underline" href="/about">
           About
         </Link>
         <Link className="font-medium hover:underline" href="/projects">
           Projects
         </Link>
-
         <Link className="font-medium hover:underline" href="/blog">
           Blog
         </Link>
@@ -51,6 +53,39 @@ export default function Navbar() {
           <Link href="/booking">Work with Us</Link>
         </Button>
       </div>
+      <Sheet open={open}>
+        <SheetTrigger onClick={() => setOpen(true)} className="md:hidden" asChild>
+          <button className="grid size-10 place-content-center rounded-md border p-1">
+            <MenuIcon size={16} />
+          </button>
+        </SheetTrigger>
+        <SheetContent onClick={() => setOpen(false)}>
+          <SheetHeader>
+            <SheetTitle className="sr-only">Navigation menu</SheetTitle>
+            <SheetClose className="bg-background absolute top-2 right-3 z-10 rounded-md" onClick={() => setOpen(false)}>
+              <X />
+            </SheetClose>
+          </SheetHeader>
+
+          <div className="mb-4 flex flex-col space-y-2 p-4">
+            <Button variant="link" className="text-lg font-bold" asChild>
+              <Link href="/booking">Booking</Link>
+            </Button>
+            <Button variant="link" className="text-lg font-bold" asChild>
+              <Link href="/about">About</Link>
+            </Button>
+            <Button variant="link" className="text-lg font-bold" asChild>
+              <Link href="/projects">Projects</Link>
+            </Button>
+            <Button variant="link" className="text-lg font-bold" asChild>
+              <Link href="/blog">Blog</Link>
+            </Button>
+            <Button className="h-8 text-sm font-medium" asChild>
+              <Link href="/booking">Work with Us</Link>
+            </Button>
+          </div>
+        </SheetContent>
+      </Sheet>
     </motion.nav>
   );
 }

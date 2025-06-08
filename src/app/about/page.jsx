@@ -1,14 +1,6 @@
-import Image from "next/image";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Award, Users, Target, Zap, Quote } from "lucide-react";
-import { placeholder } from "@/assets";
 import AboutHero from "@/components/about/AboutHero";
 import OurStory from "@/components/about/OurStory";
 import ValuesSection from "@/components/about/ValuesSection";
-import TeamSection from "@/components/about/TeamSection";
 import AboutTestimonials from "@/components/about/AboutTestimonials";
 import AboutCTA from "@/components/about/AboutCTA";
 import AboutStats from "@/components/about/AboutStats";
@@ -70,7 +62,6 @@ export default function AboutPage() {
       <AboutHero />
       <OurStory />
       <ValuesSection />
-      {/*  <TeamSection /> */}
       <AboutTestimonials />
       <AboutStats />
       <AboutCTA />
