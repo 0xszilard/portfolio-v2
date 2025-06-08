@@ -13,9 +13,9 @@ export default function About() {
             clarity, speed, and zero tech overwhelm.
           </p>
           <p className="text-muted-foreground mt-4 md:text-lg">
-            With over 7 years of product-building experience, we’ve helped launch platforms that have generated over
-            $4.2M in revenue — without bloated teams or endless timelines. Our process is lean, collaborative, and
-            focused on getting you to market fast.
+            With over 7 years of product-building experience, we’ve helped launch platforms that have generated over $2M
+            in revenue — without bloated teams or endless timelines. Our process is lean, collaborative, and focused on
+            getting you to market fast.
           </p>
           <p className="text-muted-foreground mt-4 md:text-lg">
             We’re not just developers — we’re product partners. That means thinking through positioning, user

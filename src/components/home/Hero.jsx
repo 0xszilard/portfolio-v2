@@ -24,7 +24,6 @@ export default function Hero() {
             We help creators, coaches, and niche entrepreneurs turn their ideas, expertise, and audience into real,
             revenue-generating platforms — built fast, and built to last.
           </p>
-
           <div className="mb-5 space-y-3">
             <div className="flex items-center gap-3">
               <CheckCircle size={20} className="text-green-500" />
