@@ -2,7 +2,7 @@ import { Star, Users, Zap } from "lucide-react";
 
 export default function Banner() {
   return (
-    <div className="bg-muted/30 border-b">
+    <div className="bg-muted/30 hidden border-b md:block">
       <div className="m-auto max-w-3xl px-4 py-3">
         <div className="text-muted-foreground flex items-center justify-center gap-8 text-sm">
           <div className="flex items-center gap-2">

@@ -20,7 +20,7 @@ export default function Hero() {
               Scalable Products
             </span>
           </h1>
-          <p className="text-muted-foreground mb-3 text-center text-lg lg:text-left">
+          <p className="text-muted-foreground mb-3 text-center md:text-lg lg:text-left">
             We help creators, coaches, and niche entrepreneurs turn their ideas, expertise, and audience into real,
             revenue-generating platforms — built fast, and built to last.
           </p>
@@ -39,11 +39,11 @@ export default function Hero() {
               <span className="text-sm font-medium">Ongoing support & maintenance included</span>
             </div>
           </div>
-          <div className="flex gap-2">
-            <Button asChild>
+          <div className="flex flex-col gap-2 md:flex-row">
+            <Button className="full md:block" asChild>
               <Link href="/booking">Book a Free Discovery Call</Link>
             </Button>
-            <Button variant="outline">
+            <Button className="hidden md:block" variant="outline">
               <Link href="/projects">View Our Previous Works</Link>
             </Button>
           </div>
@@ -72,22 +72,22 @@ export default function Hero() {
       <hr className="absolute bottom-14 left-0 w-full" />
 
       <div className="from-background to-background/0 absolute bottom-0 left-0 z-10 h-10 w-full bg-gradient-to-t">
-        <div className="m-auto w-full max-w-6xl">
+        <div className="m-auto hidden w-full max-w-6xl md:block">
           <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
             <div className="text-center">
-              <div className="text-primary text-3xl font-bold">200+</div>
+              <div className="text-primary text-lg font-bold md:text-3xl">200+</div>
               <div className="text-muted-foreground text-sm">Projects Delivered</div>
             </div>
             <div className="text-center">
-              <div className="text-primary text-3xl font-bold">98%</div>
+              <div className="text-primary text-lg font-bold md:text-3xl">98%</div>
               <div className="text-muted-foreground text-sm">Client Satisfaction</div>
             </div>
             <div className="text-center">
-              <div className="text-primary text-3xl font-bold">2.5x</div>
+              <div className="text-primary text-lg font-bold md:text-3xl">2.5x</div>
               <div className="text-muted-foreground text-sm">Average ROI Increase</div>
             </div>
             <div className="text-center">
-              <div className="text-primary text-3xl font-bold">24/7</div>
+              <div className="text-primary text-lg font-bold md:text-3xl">24/7</div>
               <div className="text-muted-foreground text-sm">Support Available</div>
             </div>
           </div>
