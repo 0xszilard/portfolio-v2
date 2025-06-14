@@ -47,7 +47,6 @@ export default function Hero() {
             </Button>
           </div>
         </div>
-      
       </div>
 
       <hr className="absolute bottom-14 left-0 w-full" />
